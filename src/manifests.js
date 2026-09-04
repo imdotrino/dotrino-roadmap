@@ -1,0 +1,65 @@
+/**
+ * GENERADO — no se edita a mano. La fuente son los JSON de `manifests/`.
+ * Regenerar:  node scripts/build-manifests.mjs
+ *
+ * Van dentro del código y no se leen del disco a propósito: los consumen ~30 PWAs, varios
+ * daemons y un ejecutable único. Un registro que hay que leer del disco no sirve para eso.
+ */
+export const MANIFESTS = Object.freeze({
+  "dotrino": {
+    "manifest": "dotrino",
+    "seq": 1,
+    "issued": "2026-09-04",
+    "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
+    "products": {
+      "vaultd": {
+        "repo": "imdotrino/dotrino-vault",
+        "npm": "@dotrino/vaultd",
+        "current": "0.106.2",
+        "protocol": 1,
+        "requires": {
+          "identity": ">=0.80.0",
+          "proxy-client": ">=0.17.0"
+        }
+      },
+      "vault": {
+        "repo": "imdotrino/dotrino-vault",
+        "npm": "@dotrino/vault",
+        "current": "0.60.4",
+        "protocol": 1,
+        "requires": {
+          "vaultd": ">=0.105.0"
+        }
+      },
+      "identity": {
+        "repo": "imdotrino/dotrino-identity",
+        "npm": "@dotrino/identity",
+        "current": "0.80.0",
+        "protocol": 1,
+        "requires": {}
+      },
+      "proxy-client": {
+        "repo": "imdotrino/dotrino-proxy-client",
+        "npm": "@dotrino/proxy-client",
+        "current": "0.17.0",
+        "protocol": 1,
+        "requires": {}
+      },
+      "compat": {
+        "repo": "imdotrino/dotrino-compat",
+        "npm": "@dotrino/compat",
+        "current": "0.3.0",
+        "protocol": 1,
+        "requires": {}
+      }
+    },
+    "broken": [
+      {
+        "product": "vault",
+        "versions": "<=0.33.2",
+        "why": "es anterior al acta de perfil: al enrolar contesta «invalid cert: no-acta», que es verdad y no es la causa",
+        "fix": "sube @dotrino/env y @dotrino/vault a la version de vaultd que corre"
+      }
+    ]
+  }
+})

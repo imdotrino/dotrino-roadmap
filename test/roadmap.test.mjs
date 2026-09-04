@@ -20,8 +20,39 @@ test('hay un manifiesto y se llama dotrino', () => {
 })
 
 test('preguntar por un registro que no existe LANZA, no devuelve vacío', () => {
-  assert.throws(() => loadManifest('no-existe'), /cannot read the manifest/)
-  assert.throws(() => loadManifest('../secretos'), /invalid manifest name/)
+  assert.throws(() => loadManifest('no-existe'), /there is no manifest/)
+  assert.throws(() => loadManifest('../secretos'), /there is no manifest/)
+})
+
+/**
+ * NADA DE DISCO. Costó un binario que no arrancaba: leer los JSON con
+ * `fileURLToPath(import.meta.url)` al importarse mata a un ejecutable único —«The "path"
+ * argument must be of type string»— y no habría funcionado nunca en un navegador. Los
+ * consumen ~30 PWAs, varios daemons y un binario.
+ */
+test('la librería no toca el disco: los manifiestos van dentro del código', async () => {
+  const fs = await import('node:fs')
+  const { fileURLToPath } = await import('node:url')
+  const src = fs.readFileSync(fileURLToPath(new URL('../src/index.js', import.meta.url)), 'utf8')
+  // Sin comentarios: el porqué de esto SE EXPLICA ahí arriba nombrando lo prohibido, y
+  // buscar en la prosa haría fallar al archivo por explicarse bien.
+  const codigo = src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '')
+  for (const prohibido of ['node:fs', 'node:path', 'node:url', 'readFileSync', 'import.meta.url']) {
+    assert.ok(!codigo.includes(prohibido), `src/index.js no puede usar ${prohibido}`)
+  }
+})
+
+test('el módulo generado y los JSON no se han separado', async () => {
+  const fs = await import('node:fs')
+  const { fileURLToPath } = await import('node:url')
+  const dir = fileURLToPath(new URL('../manifests/', import.meta.url))
+  const enDisco = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)).sort()
+  assert.deepEqual(manifestNames(), enDisco,
+    'edita el JSON y regenera:  node scripts/build-manifests.mjs')
+  for (const n of enDisco) {
+    assert.deepEqual(loadManifest(n), JSON.parse(fs.readFileSync(dir + n + '.json', 'utf8')),
+      `${n}: el módulo generado no coincide con su JSON — regenera`)
+  }
 })
 
 /**

@@ -19,29 +19,34 @@
  * trae. Lo que llega por la red es el **aviso** firmado de `@dotrino/compat/advisory`, que
  * suma incompatibilidades y no quita ninguna.
  */
-import { readFileSync, readdirSync } from 'node:fs'
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { satisfies } from '@dotrino/compat/ranges'
+import { MANIFESTS } from './manifests.js'
 
-const raiz = join(dirname(fileURLToPath(import.meta.url)), '..', 'manifests')
+/**
+ * NADA DE DISCO, y esto costó un binario que no arrancaba.
+ *
+ * La primera versión leía los JSON con `fileURLToPath(import.meta.url)` calculado AL
+ * IMPORTARSE. En un ejecutable único eso no existe: la bóveda murió al arrancar con «The
+ * "path" argument must be of type string», y en un navegador no habría arrancado nunca.
+ *
+ * Los consumen ~30 PWAs, varios daemons y un binario. Un registro que hay que leer del
+ * disco no sirve para eso, así que los manifiestos van DENTRO del código
+ * (`src/manifests.js`, generado desde `manifests/*.json`).
+ */
 
 /** Los manifiestos que trae esta versión. Hay uno («dotrino») y caben varios. */
 export function manifestNames () {
-  return readdirSync(raiz).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)).sort()
+  return Object.keys(MANIFESTS).sort()
 }
 
 /**
- * Carga un manifiesto por nombre. LANZA si no está: quien pregunta por un registro que no
- * existe tiene un error, y devolverle un objeto vacío lo convertiría en «todo compatible».
+ * Un manifiesto por nombre. LANZA si no está: quien pregunta por un registro que no existe
+ * tiene un error, y devolverle un objeto vacío lo convertiría en «todo compatible».
  */
 export function loadManifest (name = 'dotrino') {
-  if (!/^[a-z0-9-]{1,40}$/.test(String(name))) throw new Error('roadmap: invalid manifest name')
-  try {
-    return JSON.parse(readFileSync(join(raiz, name + '.json'), 'utf8'))
-  } catch (e) {
-    throw new Error(`roadmap: cannot read the manifest "${name}": ${e.message}`)
-  }
+  const m = Object.hasOwn(MANIFESTS, String(name)) ? MANIFESTS[String(name)] : null
+  if (!m) throw new Error(`roadmap: there is no manifest called "${name}"`)
+  return m
 }
 
 /** Los productos que el registro conoce. */

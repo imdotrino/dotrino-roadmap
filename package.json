@@ -1,6 +1,6 @@
 {
   "name": "@dotrino/roadmap",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "El registro común de compatibilidad del ecosistema Dotrino, como pieza de consulta.",
   "license": "MIT",
   "type": "module",
@@ -12,10 +12,13 @@
   "files": [
     "src",
     "manifests",
+    "scripts",
     "README.md"
   ],
   "scripts": {
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "manifests": "node scripts/build-manifests.mjs",
+    "prepare": "node scripts/build-manifests.mjs"
   },
   "peerDependencies": {
     "@dotrino/compat": ">=0.4.0"
@@ -27,5 +30,10 @@
     "type": "git",
     "url": "git+https://github.com/imdotrino/dotrino-roadmap.git"
   },
-  "keywords": ["dotrino", "roadmap", "compatibility", "registry"]
+  "keywords": [
+    "dotrino",
+    "roadmap",
+    "compatibility",
+    "registry"
+  ]
 }
