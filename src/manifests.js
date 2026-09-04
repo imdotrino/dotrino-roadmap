@@ -8,14 +8,14 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 1,
+    "seq": 2,
     "issued": "2026-09-04",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.106.2",
+        "current": "0.108.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.80.0",
@@ -25,7 +25,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.60.4",
+        "current": "0.61.0",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0"
@@ -48,9 +48,18 @@ export const MANIFESTS = Object.freeze({
       "compat": {
         "repo": "imdotrino/dotrino-compat",
         "npm": "@dotrino/compat",
-        "current": "0.3.0",
+        "current": "0.4.0",
         "protocol": 1,
         "requires": {}
+      },
+      "roadmap": {
+        "repo": "imdotrino/dotrino-roadmap",
+        "npm": "@dotrino/roadmap",
+        "current": "0.3.0",
+        "protocol": 1,
+        "requires": {
+          "compat": "0.4.0+"
+        }
       }
     },
     "broken": [
