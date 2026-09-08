@@ -61,6 +61,15 @@ export const MANIFESTS = Object.freeze({
         "requires": {
           "compat": "0.4.0+"
         }
+      },
+      "verifier": {
+        "repo": "imdotrino/dotrino-verifier",
+        "npm": "@dotrino/verifier",
+        "current": "0.2.0",
+        "protocol": 1,
+        "requires": {
+          "identity": "0.87.0+"
+        }
       }
     },
     "broken": [
