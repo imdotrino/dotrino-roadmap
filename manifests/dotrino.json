@@ -1,6 +1,6 @@
 {
   "manifest": "dotrino",
-  "seq": 7,
+  "seq": 8,
   "issued": "2026-09-11",
   "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
   "products": {
@@ -34,7 +34,7 @@
     "proxy-client": {
       "repo": "imdotrino/dotrino-proxy-client",
       "npm": "@dotrino/proxy-client",
-      "current": "0.18.2",
+      "current": "0.19.0",
       "protocol": 1,
       "requires": {}
     },
@@ -62,6 +62,13 @@
       "requires": {
         "identity": "0.87.0+"
       }
+    },
+    "store": {
+      "repo": "imdotrino/dotrino-store",
+      "npm": "@dotrino/store",
+      "current": "0.8.0",
+      "protocol": 1,
+      "requires": {}
     }
   },
   "broken": [
@@ -76,6 +83,18 @@
       "versions": "0.62.0",
       "why": "se publico declarando proxy-client >=0.17.0, y el identifyAs que usa nacio en 0.18.0: con 0.17.x muere con «client.identifyAs is not a function», que es un fallo mudo",
       "fix": "sube a @dotrino/vault 0.62.1, que ya pide >=0.18.0"
+    },
+    {
+      "product": "store",
+      "versions": "0.7.0",
+      "why": "soltar la boveda (vaultUnpair) borraba todos los hilos del perfil, igual que una expulsion; y desde 0.6.0 dejo de adoptar lo que guardo la version anterior a IndexedDB, asi que al actualizar se perdian los hilos en silencio",
+      "fix": "sube a @dotrino/store 0.8.0"
+    },
+    {
+      "product": "proxy-client",
+      "versions": "0.18.2",
+      "why": "el Service Worker del push se publicaba como sw/closer-click-push-sw.js mientras el README mandaba copiarlo como dotrino-push-sw.js: quien seguia el README importaba un 404, y eso deja el SW de Workbox VACIO (sin precache, sin offline y sin actualizarse), no solo sin push",
+      "fix": "sube a @dotrino/proxy-client 0.19.0 y copia sw/dotrino-push-sw.js a public/"
     }
   ]
 }
