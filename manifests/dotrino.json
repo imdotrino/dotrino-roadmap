@@ -1,7 +1,7 @@
 {
   "manifest": "dotrino",
-  "seq": 6,
-  "issued": "2026-09-10",
+  "seq": 7,
+  "issued": "2026-09-11",
   "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
   "products": {
     "vaultd": {
@@ -27,7 +27,7 @@
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
-      "current": "0.87.0",
+      "current": "0.88.0",
       "protocol": 1,
       "requires": {}
     },
