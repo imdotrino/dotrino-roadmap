@@ -8,8 +8,8 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 10,
-    "issued": "2026-09-11",
+    "seq": 11,
+    "issued": "2026-09-12",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
       "vaultd": {
@@ -85,6 +85,15 @@ export const MANIFESTS = Object.freeze({
         "protocol": 1,
         "requires": {
           "identity": ">=0.33.0"
+        }
+      },
+      "topbar": {
+        "repo": "imdotrino/dotrino-topbar",
+        "npm": "@dotrino/topbar",
+        "current": "0.10.0",
+        "protocol": 1,
+        "requires": {
+          "identity": ">=0.21.0"
         }
       }
     },
