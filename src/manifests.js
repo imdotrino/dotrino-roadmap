@@ -8,35 +8,56 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 13,
+    "seq": 14,
     "issued": "2026-09-12",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
-      "vaultd": {
-        "repo": "imdotrino/dotrino-vault",
-        "npm": "@dotrino/vaultd",
-        "current": "0.114.0",
+      "compat": {
+        "repo": "imdotrino/dotrino-compat",
+        "npm": "@dotrino/compat",
+        "current": "0.4.0",
         "protocol": 1,
-        "requires": {
-          "identity": ">=0.80.0",
-          "proxy-client": ">=0.18.0"
-        }
-      },
-      "vault": {
-        "repo": "imdotrino/dotrino-vault",
-        "npm": "@dotrino/vault",
-        "current": "0.63.0",
-        "protocol": 1,
-        "requires": {
-          "vaultd": ">=0.105.0",
-          "proxy-client": "0.18.0+"
-        }
+        "requires": {}
       },
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
         "current": "0.90.0",
         "protocol": 1,
+        "requires": {}
+      },
+      "lobby": {
+        "repo": "imdotrino/dotrino-lobby",
+        "npm": "@dotrino/lobby",
+        "current": "0.9.0",
+        "protocol": 2,
+        "requires": {
+          "proxy-client": ">=0.22.0",
+          "identity": ">=0.53.0"
+        }
+      },
+      "notifications": {
+        "repo": "imdotrino/dotrino-notifications",
+        "npm": "@dotrino/notifications",
+        "current": "0.4.0",
+        "protocol": 2,
+        "requires": {
+          "proxy-client": ">=0.20.0"
+        }
+      },
+      "profile": {
+        "repo": "imdotrino/dotrino-profile",
+        "npm": "@dotrino/profile",
+        "current": "0.19.0",
+        "protocol": 1,
+        "requires": {
+          "identity": ">=0.33.0"
+        }
+      },
+      "proxy": {
+        "repo": "imdotrino/dotrino-proxy",
+        "current": "1.1.0",
+        "protocol": 2,
         "requires": {}
       },
       "proxy-client": {
@@ -49,19 +70,6 @@ export const MANIFESTS = Object.freeze({
           "proxy": "1.1.0+"
         }
       },
-      "proxy": {
-        "repo": "imdotrino/dotrino-proxy",
-        "current": "1.1.0",
-        "protocol": 2,
-        "requires": {}
-      },
-      "compat": {
-        "repo": "imdotrino/dotrino-compat",
-        "npm": "@dotrino/compat",
-        "current": "0.4.0",
-        "protocol": 1,
-        "requires": {}
-      },
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
@@ -71,30 +79,12 @@ export const MANIFESTS = Object.freeze({
           "compat": "0.4.0+"
         }
       },
-      "verifier": {
-        "repo": "imdotrino/dotrino-verifier",
-        "npm": "@dotrino/verifier",
-        "current": "0.2.0",
-        "protocol": 1,
-        "requires": {
-          "identity": "0.87.0+"
-        }
-      },
       "store": {
         "repo": "imdotrino/dotrino-store",
         "npm": "@dotrino/store",
         "current": "0.8.0",
         "protocol": 1,
         "requires": {}
-      },
-      "profile": {
-        "repo": "imdotrino/dotrino-profile",
-        "npm": "@dotrino/profile",
-        "current": "0.19.0",
-        "protocol": 1,
-        "requires": {
-          "identity": ">=0.33.0"
-        }
       },
       "topbar": {
         "repo": "imdotrino/dotrino-topbar",
@@ -105,14 +95,33 @@ export const MANIFESTS = Object.freeze({
           "identity": ">=0.21.0"
         }
       },
-      "lobby": {
-        "repo": "imdotrino/dotrino-lobby",
-        "npm": "@dotrino/lobby",
-        "current": "0.9.0",
-        "protocol": 2,
+      "vault": {
+        "repo": "imdotrino/dotrino-vault",
+        "npm": "@dotrino/vault",
+        "current": "0.63.0",
+        "protocol": 1,
         "requires": {
-          "proxy-client": ">=0.22.0",
-          "identity": ">=0.53.0"
+          "vaultd": ">=0.105.0",
+          "proxy-client": "0.18.0+"
+        }
+      },
+      "vaultd": {
+        "repo": "imdotrino/dotrino-vault",
+        "npm": "@dotrino/vaultd",
+        "current": "0.114.0",
+        "protocol": 1,
+        "requires": {
+          "identity": ">=0.80.0",
+          "proxy-client": ">=0.18.0"
+        }
+      },
+      "verifier": {
+        "repo": "imdotrino/dotrino-verifier",
+        "npm": "@dotrino/verifier",
+        "current": "0.2.0",
+        "protocol": 1,
+        "requires": {
+          "identity": "0.87.0+"
         }
       }
     },
@@ -140,6 +149,12 @@ export const MANIFESTS = Object.freeze({
         "versions": "0.18.2",
         "why": "el Service Worker del push se publicaba como sw/closer-click-push-sw.js mientras el README mandaba copiarlo como dotrino-push-sw.js: quien seguia el README importaba un 404, y eso deja el SW de Workbox VACIO (sin precache, sin offline y sin actualizarse), no solo sin push",
         "fix": "sube a @dotrino/proxy-client 0.19.0 y copia sw/dotrino-push-sw.js a public/"
+      },
+      {
+        "product": "notifications",
+        "versions": "0.3.0",
+        "why": "el acuse de apertura salia con sendByPubkey, o sea EN CLARO: la url del contenido, su nombre y el apodo de quien lo abrio cruzaban el proxio tal cual. Y contra un 0.4.0 no se entiende: lo suyo llega sin sellar y el otro lo descarta, asi que el acuse no aparece y no hay error en ninguna de las dos puntas",
+        "fix": "sube @dotrino/notifications a 0.4.0 y dale al cliente con que sellar (myEncPub + sealing), con @dotrino/proxy-client >=0.20.0"
       }
     ]
   }
