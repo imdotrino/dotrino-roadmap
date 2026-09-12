@@ -104,6 +104,16 @@ export const MANIFESTS = Object.freeze({
         "requires": {
           "identity": ">=0.21.0"
         }
+      },
+      "lobby": {
+        "repo": "imdotrino/dotrino-lobby",
+        "npm": "@dotrino/lobby",
+        "current": "0.9.0",
+        "protocol": 2,
+        "requires": {
+          "proxy-client": ">=0.22.0",
+          "identity": ">=0.53.0"
+        }
       }
     },
     "broken": [
