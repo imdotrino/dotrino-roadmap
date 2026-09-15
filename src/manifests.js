@@ -29,7 +29,7 @@ export const MANIFESTS = Object.freeze({
       "lobby": {
         "repo": "imdotrino/dotrino-lobby",
         "npm": "@dotrino/lobby",
-        "current": "0.9.0",
+        "current": "0.10.0",
         "protocol": 2,
         "requires": {
           "proxy-client": ">=0.22.0",
