@@ -82,7 +82,7 @@ export const MANIFESTS = Object.freeze({
       "store": {
         "repo": "imdotrino/dotrino-store",
         "npm": "@dotrino/store",
-        "current": "0.8.0",
+        "current": "0.9.0",
         "protocol": 1,
         "requires": {}
       },
@@ -137,6 +137,12 @@ export const MANIFESTS = Object.freeze({
         "versions": "0.62.0",
         "why": "se publico declarando proxy-client >=0.17.0, y el identifyAs que usa nacio en 0.18.0: con 0.17.x muere con «client.identifyAs is not a function», que es un fallo mudo",
         "fix": "sube a @dotrino/vault 0.62.1, que ya pide >=0.18.0"
+      },
+      {
+        "product": "store",
+        "versions": "0.8.0",
+        "why": "abrir el almacen es un saludo de un solo mensaje: el iframe manda `ready` al cargar y, si se pierde o la pagina tarda mas de 8 s, connect() falla; peor, la promesa rechazada se queda cacheada en el singleton, asi que el boton «Reintentar» que enseñan las apps devuelve el mismo error sin intentar nada y el almacen queda inservible hasta recargar",
+        "fix": "sube a @dotrino/store 0.9.0"
       },
       {
         "product": "store",
