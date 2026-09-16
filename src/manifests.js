@@ -22,7 +22,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.90.0",
+        "current": "0.91.0",
         "protocol": 1,
         "requires": {}
       },
@@ -82,9 +82,12 @@ export const MANIFESTS = Object.freeze({
       "store": {
         "repo": "imdotrino/dotrino-store",
         "npm": "@dotrino/store",
-        "current": "0.10.0",
+        "current": "0.11.0",
         "protocol": 1,
-        "requires": {}
+        "requires": {
+          "identity": ">=0.91.0",
+          "vaultd": ">=0.115.0"
+        }
       },
       "topbar": {
         "repo": "imdotrino/dotrino-topbar",
@@ -108,11 +111,12 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.114.0",
+        "current": "0.115.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.80.0",
-          "proxy-client": ">=0.18.0"
+          "proxy-client": ">=0.18.0",
+          "store": ">=0.11.0"
         }
       },
       "verifier": {
@@ -170,6 +174,17 @@ export const MANIFESTS = Object.freeze({
         "versions": "0.3.0",
         "why": "el acuse de apertura salia con sendByPubkey, o sea EN CLARO: la url del contenido, su nombre y el apodo de quien lo abrio cruzaban el proxio tal cual. Y contra un 0.4.0 no se entiende: lo suyo llega sin sellar y el otro lo descarta, asi que el acuse no aparece y no hay error en ninguna de las dos puntas",
         "fix": "sube @dotrino/notifications a 0.4.0 y dale al cliente con que sellar (myEncPub + sealing), con @dotrino/proxy-client >=0.20.0"
+      },
+      {
+        "product": "store",
+        "versions": [
+          "0.7.0",
+          "0.8.0",
+          "0.9.0",
+          "0.10.0"
+        ],
+        "why": "con la boveda emparejada, el respaldo manda el almacen ENTERO en un mensaje (exportThreads/importThreads) y el proxio corta en 1 MB: pasado ese tamano deja de llegar, el error se traga en un catch vacio y el almacen sigue solo en el navegador sin avisar. Ademas, un borrado vuelve desde la boveda o desde otro aparato, y la boveda recortaba cada hilo a 1000 entradas",
+        "fix": "sube a @dotrino/store 0.11.0 (y dotrino-vault 0.115.0 en la boveda)"
       }
     ]
   }
