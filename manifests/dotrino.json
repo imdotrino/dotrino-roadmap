@@ -74,7 +74,7 @@
     "store": {
       "repo": "imdotrino/dotrino-store",
       "npm": "@dotrino/store",
-      "current": "0.9.0",
+      "current": "0.10.0",
       "protocol": 1,
       "requires": {}
     },
@@ -129,6 +129,15 @@
       "versions": "0.62.0",
       "why": "se publico declarando proxy-client >=0.17.0, y el identifyAs que usa nacio en 0.18.0: con 0.17.x muere con «client.identifyAs is not a function», que es un fallo mudo",
       "fix": "sube a @dotrino/vault 0.62.1, que ya pide >=0.18.0"
+    },
+    {
+      "product": "store",
+      "versions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "why": "connect({ identity }) devuelve el singleton tal cual si ya existia: la moneda de <dotrino-support> lo abre SIN identidad al montarse y suele llegar antes que la app, asi que la app recibe un almacen sin setProfile y todo lo suyo va al espacio comun de todos los perfiles del aparato, sin ningun error. Ademas, una identidad sin perfil activo caia en silencio al espacio por defecto",
+      "fix": "sube a @dotrino/store 0.10.0"
     },
     {
       "product": "store",
