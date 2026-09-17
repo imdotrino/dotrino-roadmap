@@ -11,6 +11,15 @@
       "protocol": 1,
       "requires": {}
     },
+    "env": {
+      "repo": "imdotrino/dotrino-vault",
+      "npm": "@dotrino/env",
+      "current": "0.64.0",
+      "protocol": 1,
+      "requires": {
+        "vault": ">=0.64.0"
+      }
+    },
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
@@ -324,6 +333,28 @@
       ],
       "why": "la renovacion del papel comparaba acta.profileId con la llave de la boveda al emparejar y al renovar, y eso solo es verdad en una cuenta que nacio en esa boveda: con una SEGUNDA boveda (multivault) o con una que adopto la cuenta, ningun aparato ni servicio puede emparejarse ni renovar por ella («the record is from a profile other than the one you saw»). Y no protegia: el acta no se verificaba: el agente no renueva nunca contra una segunda boveda, y los permisos que le cambies no le llegan",
       "fix": "sube a @dotrino/remote-agent 0.10.0"
+    },
+    {
+      "product": "env",
+      "versions": [
+        "0.60.2",
+        "0.60.3",
+        "0.60.4",
+        "0.61.0",
+        "0.62.0",
+        "0.62.1",
+        "0.63.0"
+      ],
+      "why": "es un envoltorio de @dotrino/vault y pide ^0.6x.y, o sea que se queda en una version rota de vault: un servicio no puede emparejarse con una segunda boveda ni con una que adopto la cuenta, y al renovar guardaba el papel sin verificar su firma",
+      "fix": "sube a @dotrino/env 0.64.0"
+    },
+    {
+      "product": "env",
+      "versions": [
+        "0.33.2"
+      ],
+      "why": "pide @dotrino/vault ^0.33.2, que es anterior al acta de perfil: al enrolar contesta «invalid cert: no-acta», que es verdad y no es la causa",
+      "fix": "sube a @dotrino/env 0.64.0"
     }
   ]
 }
