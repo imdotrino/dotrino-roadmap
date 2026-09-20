@@ -8,7 +8,7 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 15,
+    "seq": 16,
     "issued": "2026-09-19",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.96.1",
+        "current": "0.97.0",
         "protocol": 1,
         "requires": {}
       },
@@ -154,6 +154,16 @@ export const MANIFESTS = Object.freeze({
         "protocol": 1,
         "requires": {
           "identity": "0.87.0+"
+        }
+      },
+      "passmanager": {
+        "repo": "imdotrino/dotrino-passmanager",
+        "npm": "@dotrino/passmanager",
+        "current": "0.10.1",
+        "protocol": 1,
+        "requires": {
+          "identity": ">=0.61.0",
+          "proxy-client": ">=0.13.0"
         }
       }
     },
