@@ -1,6 +1,6 @@
 {
   "manifest": "dotrino",
-  "seq": 22,
+  "seq": 23,
   "issued": "2026-09-21",
   "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
   "products": {
@@ -23,7 +23,7 @@
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
-      "current": "0.99.0",
+      "current": "0.100.0",
       "protocol": 1,
       "requires": {}
     },
@@ -119,7 +119,7 @@
     "vault": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vault",
-      "current": "0.70.0",
+      "current": "0.71.0",
       "protocol": 1,
       "requires": {
         "vaultd": ">=0.105.0",
@@ -131,13 +131,13 @@
     "vaultd": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vaultd",
-      "current": "0.124.2",
+      "current": "0.125.0",
       "protocol": 1,
       "requires": {
         "identity": ">=0.80.0",
         "proxy-client": ">=0.23.1",
         "store": ">=0.11.0",
-        "passmanager": ">=0.16.0"
+        "passmanager": ">=0.17.0"
       }
     },
     "verifier": {
@@ -152,7 +152,7 @@
     "passmanager": {
       "repo": "imdotrino/dotrino-passmanager",
       "npm": "@dotrino/passmanager",
-      "current": "0.16.0",
+      "current": "0.17.0",
       "protocol": 1,
       "requires": {
         "identity": ">=0.61.0",
@@ -382,6 +382,31 @@
       ],
       "why": "core.js importa @dotrino/vault/login-client con el nombre escrito, y ese archivo lo empaqueta cada app: el build se cae con «Rollup failed to resolve import», sin llegar a ejecutar esa linea",
       "fix": "sube a @dotrino/identity 0.96.1, que pone el especificador en una variable"
+    },
+    {
+      "product": "passmanager",
+      "versions": [
+        "0.12.0",
+        "0.13.0",
+        "0.14.0",
+        "0.14.1",
+        "0.15.0",
+        "0.16.0"
+      ],
+      "why": "SealedResponder leía la llave de quien pregunta en meta.pubkey, que el cliente del proxio no pone (es meta.fromPubkey), y caía al token: la bóveda no sabía a quién sellar la respuesta y no contestaba; del otro lado se veía «nadie respondió a tiempo». Además tres códigos de error (NOT_ALLOWED, NOT_SEALED, UNKNOWN) no existían y esos errores cruzaban sin código",
+      "fix": "sube a @dotrino/passmanager 0.17.0"
+    },
+    {
+      "product": "vaultd",
+      "versions": [
+        "0.123.0",
+        "0.123.1",
+        "0.124.0",
+        "0.124.1",
+        "0.124.2"
+      ],
+      "why": "sirve las contraseñas selladas con @dotrino/passmanager 0.12.0-0.16.0: no le contesta a ningún aparato remoto que pida una contraseña (el gestor ve «nadie respondió a tiempo»)",
+      "fix": "sube a @dotrino/vaultd 0.125.0"
     }
   ]
 }
