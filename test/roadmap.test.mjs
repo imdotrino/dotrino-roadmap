@@ -94,7 +94,10 @@ test('la lista de rotas usa rangos que se entienden', () => {
 test('meets: sin exigencia se cumple; con exigencia se comprueba', () => {
   assert.equal(meets(m, { product: 'identity', peer: 'lo-que-sea', version: '0.0.1' }).ok, true,
     'no exigir es una decisión, no una laguna')
-  const bien = meets(m, { product: 'vaultd', peer: 'identity', version: '0.80.0' })
+  // El mínimo de verdad, no uno escrito aquí: el manifiesto lo sube y la prueba no puede
+  // quedarse con el de hace meses (pasó con 0.3.6, cuando vaultd pasó a pedir 0.101.0).
+  const minimo = requirementFor(m, 'vaultd', 'identity').replace(/^>=/, '')
+  const bien = meets(m, { product: 'vaultd', peer: 'identity', version: minimo })
   assert.equal(bien.ok, true)
   const mal = meets(m, { product: 'vaultd', peer: 'identity', version: '0.50.0' })
   assert.equal(mal.ok, false)
