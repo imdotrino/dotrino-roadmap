@@ -127,7 +127,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.72.0",
+        "current": "0.73.0",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -139,7 +139,7 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.127.0",
+        "current": "0.128.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.101.0",
