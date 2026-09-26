@@ -23,7 +23,7 @@
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
-      "current": "0.103.0",
+      "current": "0.104.0",
       "protocol": 1,
       "requires": {}
     },
@@ -166,7 +166,7 @@
       "requires": {
         "proxy": "1.1.0+",
         "vaultd": ">=0.114.0",
-        "identity": ">=0.103.0"
+        "identity": ">=0.104.0"
       }
     }
   },
