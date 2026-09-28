@@ -65,6 +65,32 @@ La incompatibilidad **se ve, no para** (dueño, 2026-09-04). El porqué está en
 `@dotrino/compat`; en corto: en los tres incidentes que originaron todo esto lo que faltó
 fue enterarse, no parar.
 
+## Apps con versión nativa
+
+Algunas apps tienen además versión iOS y Android (CONVENCIONES §16, dueño 2026-09-28; la
+primera, padel). Cada versión nativa es un **producto propio** del manifiesto, con su nombre
+de plataforma:
+
+```json
+"padel-android": {
+  "repo": "imdotrino/dotrino-padel-contador",
+  "current": "0.3.0",
+  "protocol": 1,
+  "requires": { "proxy": "1.1.0+", "identity": ">=0.105.0" }
+}
+```
+
+- **Entra cuando se publica**, no antes: un `current` de algo que no existe no es un registro.
+  Hasta entonces, que una app está calificada lo dice su `package.json`
+  (`dotrino.platforms`) y lo enseña `dotrino-index`.
+- **`current` es la versión de la PWA con la que está a la par** (§16.3): la PWA va delante,
+  así que `current` de `padel-android` por debajo del de la PWA es lo normal, y dice cuánto
+  falta.
+- **Sus `requires` son los del puerto nativo** (`dotrino-native`), no los de la PWA: lo que
+  pide la app nativa es lo que habla su librería.
+- **Una versión nativa rota va a `broken` por versión exacta**, como cualquier otra. Con más
+  razón: una app de tienda no se recompone en horas.
+
 ## Pendiente
 
 La página pública en **`roadmap.dotrino.com`** todavía no existe: hoy esto es el registro y
