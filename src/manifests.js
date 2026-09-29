@@ -118,6 +118,28 @@ export const MANIFESTS = Object.freeze({
           "vault": ">=0.75.0"
         }
       },
+      "content": {
+        "repo": "imdotrino/dotrino-content",
+        "npm": "@dotrino/content",
+        "current": "0.4.0",
+        "protocol": 1,
+        "requires": {
+          "remote-agent": ">=0.12.0",
+          "identity": ">=0.92.0",
+          "vault": ">=0.75.0"
+        }
+      },
+      "sealers": {
+        "repo": "imdotrino/dotrino-sealers",
+        "npm": "@dotrino/sealers",
+        "current": "0.8.0",
+        "protocol": 1,
+        "requires": {
+          "remote-agent": ">=0.12.0",
+          "identity": ">=0.92.0",
+          "vault": ">=0.75.0"
+        }
+      },
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
