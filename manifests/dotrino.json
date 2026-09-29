@@ -99,6 +99,17 @@
         "vault": ">=0.64.0"
       }
     },
+    "ia-agent": {
+      "repo": "imdotrino/dotrino-ia",
+      "npm": "@dotrino/ia-agent",
+      "current": "0.6.0",
+      "protocol": 1,
+      "requires": {
+        "remote-agent": ">=0.11.0",
+        "identity": ">=0.92.0",
+        "vault": ">=0.64.0"
+      }
+    },
     "roadmap": {
       "repo": "imdotrino/dotrino-roadmap",
       "npm": "@dotrino/roadmap",
