@@ -96,6 +96,17 @@ export const MANIFESTS = Object.freeze({
           "vault": ">=0.64.0"
         }
       },
+      "terminal-agent": {
+        "repo": "imdotrino/dotrino-terminal",
+        "npm": "@dotrino/terminal-agent",
+        "current": "0.3.0",
+        "protocol": 1,
+        "requires": {
+          "remote-agent": ">=0.10.0",
+          "identity": ">=0.92.0",
+          "vault": ">=0.64.0"
+        }
+      },
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
