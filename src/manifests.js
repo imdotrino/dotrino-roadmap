@@ -72,7 +72,7 @@ export const MANIFESTS = Object.freeze({
       },
       "proxy": {
         "repo": "imdotrino/dotrino-proxy",
-        "current": "1.4.1",
+        "current": "1.4.3",
         "protocol": 2,
         "requires": {
           "vault": ">=0.79.0",
@@ -499,6 +499,12 @@ export const MANIFESTS = Object.freeze({
         ],
         "why": "sirve las contraseñas selladas con @dotrino/passmanager 0.12.0-0.16.0: no le contesta a ningún aparato remoto que pida una contraseña (el gestor ve «nadie respondió a tiempo»)",
         "fix": "sube a @dotrino/vaultd 0.125.0"
+      },
+      {
+        "product": "proxy",
+        "versions": "1.4.2",
+        "why": "el aviso de iOS llama a ringName(), que 1.4.2 renombró a RING: cada timbre por APNs falla y el iPhone no suena",
+        "fix": "sube el proxio a 1.4.3"
       }
     ]
   }
