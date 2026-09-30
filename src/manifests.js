@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.107.0",
+        "current": "0.107.1",
         "protocol": 1,
         "requires": {}
       },
@@ -199,10 +199,10 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.139.0",
+        "current": "0.139.1",
         "protocol": 1,
         "requires": {
-          "identity": ">=0.107.0",
+          "identity": ">=0.107.1",
           "proxy-client": ">=0.27.1",
           "store": ">=0.11.0",
           "passmanager": ">=0.17.0",
@@ -505,6 +505,18 @@ export const MANIFESTS = Object.freeze({
         "versions": "1.4.2",
         "why": "el aviso de iOS llama a ringName(), que 1.4.2 renombró a RING: cada timbre por APNs falla y el iPhone no suena",
         "fix": "sube el proxio a 1.4.3"
+      },
+      {
+        "product": "identity",
+        "versions": "0.107.0",
+        "why": "pone la marca de sobre de la cuenta (t: 'dotrino-cek') en encryptWithCek, que es genérica: marca como de la cuenta sobres de cajones, contraseñas y transporte que la cuenta no abre, y la bóveda pararía al volver a cerrarlos",
+        "fix": "sube @dotrino/identity a 0.107.1"
+      },
+      {
+        "product": "vaultd",
+        "versions": "0.139.0",
+        "why": "no migra los sobres de la cuenta anteriores a la marca ({ gen, iv, ct } a secas): tras una rotación, un aparato nuevo no los abre",
+        "fix": "dotrino-vault update (vaultd 0.139.1)"
       }
     ]
   }
