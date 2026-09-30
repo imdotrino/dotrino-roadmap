@@ -59,6 +59,30 @@ Es a propósito, para no tener dos puertas para lo mismo:
 
 Si los rangos también vetaran, algún día una puerta diría que sí y la otra que no.
 
+## El chequeo de CI
+
+```sh
+npx --yes @dotrino/roadmap@latest check        # en la carpeta con el package-lock.json
+#   [--product <p>] [--dir <carpeta>]
+```
+
+Con la ÚLTIMA versión publicada, que trae la lista de rotas más nueva. Lee las versiones
+**instaladas** del `package-lock.json` (anidadas incluidas) y:
+
+| | Qué | Resultado |
+|---|---|---|
+| `broken` | una dependencia en una versión marcada rota | **falla** (sale con 1) |
+| `requires` | el producto necesita de un pilar más de lo que trae | **falla** |
+| `undeclared` | usa un pilar que su ficha no declara | aviso |
+
+El producto se deduce del `name` del `package.json` (el `npm` de la ficha) o del repo de
+git (`repo`). Va en el `release.yml` de cada paquete, **antes de publicar**: eso sí frena, y
+es lo que faltaba — el proxio corrió meses con `@dotrino/vault` 0.52, marcada rota aquí
+mismo, porque la lista existía y nadie la cruzaba antes de desplegar (2026-09-30).
+
+**Una ficha tiene que declarar lo que usa.** La del proxio tenía `requires: {}` y por eso
+ningún rango podía fallar. El aviso `undeclared` existe para eso.
+
 ## Y nada de esto bloquea
 
 La incompatibilidad **se ve, no para** (dueño, 2026-09-04). El porqué está en el README de
