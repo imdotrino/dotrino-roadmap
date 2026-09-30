@@ -232,7 +232,7 @@ export const MANIFESTS = Object.freeze({
       },
       "app": {
         "repo": "imdotrino/dotrino-app",
-        "current": "0.4.10",
+        "current": "0.4.11",
         "protocol": 1,
         "requires": {
           "proxy": "1.1.0+",
