@@ -29,12 +29,16 @@ if (cmd !== 'check') {
 const dir = path.resolve(opt('--dir') || '.')
 const m = loadManifest(opt('--manifest') || 'dotrino')
 const lockFile = path.join(dir, 'package-lock.json')
+const pkg = (() => { try { return JSON.parse(fs.readFileSync(path.join(dir, 'package.json'), 'utf8')) } catch (_) { return {} } })()
+const usaPilares = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies, ...pkg.optionalDependencies }).some((n) => n.startsWith('@dotrino/'))
 if (!fs.existsSync(lockFile)) {
+  // Sin lock no se sabe qué se instala. Si además no depende de ningún pilar, no hay nada
+  // que mirar; si depende, no se puede decir que está bien, y se para.
+  if (!usaPilares) { console.log('✔ roadmap: no @dotrino/* dependencies, nothing to check'); process.exit(0) }
   console.error(`✖ no package-lock.json in ${dir}: cannot tell which versions are installed`)
   process.exit(2)
 }
 const lock = JSON.parse(fs.readFileSync(lockFile, 'utf8'))
-const pkg = (() => { try { return JSON.parse(fs.readFileSync(path.join(dir, 'package.json'), 'utf8')) } catch (_) { return {} } })()
 const repo = (() => {
   try {
     const url = execFileSync('git', ['-C', dir, 'remote', 'get-url', 'origin'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()

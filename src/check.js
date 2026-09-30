@@ -35,12 +35,16 @@ export function productByRepo (m, repo) {
 /**
  * Las versiones instaladas de los paquetes `@dotrino/*`, leídas de un `package-lock.json`
  * (v2/v3). Devuelve `[{ name, version, path }]`: una entrada por copia, anidadas incluidas.
+ *
+ * SIN lo que solo es de desarrollo (`dev: true`) ni las `peerDependencies` (`peer: true`): lo
+ * primero no viaja con el paquete, y lo segundo lo pone quien lo consume —la copia del lock
+ * solo sirve para probar—. Una librería prueba contra una identity vieja y no la publica.
  */
 export function installedFromLock (lock) {
   const out = []
   for (const [path, info] of Object.entries(lock?.packages || {})) {
     const m = /(?:^|\/)node_modules\/(@dotrino\/[^/]+)$/.exec(path)
-    if (m && info?.version && !info.link) out.push({ name: m[1], version: info.version, path })
+    if (m && info?.version && !info.link && !info.dev && !info.peer) out.push({ name: m[1], version: info.version, path })
   }
   return out
 }

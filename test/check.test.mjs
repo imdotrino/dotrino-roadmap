@@ -72,3 +72,12 @@ test('el producto se deduce por el nombre de npm', () => {
   assert.equal(productByNpm(m, '@dotrino/vault'), 'vault')
   assert.equal(productByNpm(m, 'websocket-proxy'), null)
 })
+
+test('lo que solo es de desarrollo no cuenta: no viaja con el paquete', () => {
+  const got = installedFromLock({ packages: {
+    'node_modules/@dotrino/vault': { version: '0.52.0', dev: true },
+    'node_modules/@dotrino/store': { version: '0.7.0', peer: true },
+    'node_modules/@dotrino/identity': { version: '0.105.0' }
+  } })
+  assert.deepEqual(got.map((d) => d.name), ['@dotrino/identity'])
+})
