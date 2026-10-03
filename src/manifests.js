@@ -113,6 +113,14 @@ export const MANIFESTS = Object.freeze({
           "proxy-client": ">=0.23.1"
         }
       },
+      "terminal-android": {
+        "repo": "imdotrino/dotrino-terminal",
+        "current": "0.5.0",
+        "protocol": 1,
+        "requires": {
+          "terminal-agent": ">=0.6.0"
+        }
+      },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
         "current": "0.1.6",
