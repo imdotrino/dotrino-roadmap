@@ -123,7 +123,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.1.6",
+        "current": "0.1.7",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.7.0"
