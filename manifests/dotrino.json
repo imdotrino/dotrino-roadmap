@@ -96,7 +96,7 @@
     "terminal-agent": {
       "repo": "imdotrino/dotrino-terminal",
       "npm": "@dotrino/terminal-agent",
-      "current": "0.14.0",
+      "current": "0.15.0",
       "protocol": 2,
       "requires": {
         "remote-agent": ">=0.12.0",
@@ -115,7 +115,7 @@
     },
     "terminal-desktop": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.2.11",
+      "current": "0.2.12",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.11.0"
@@ -253,6 +253,12 @@
     }
   },
   "broken": [
+    {
+      "product": "terminal-agent",
+      "versions": "0.14.0",
+      "why": "cuando se va la pantalla que manda en el tamano de una consola, el tamano no pasa a otra (calculaba quien mandaba despues de quitarla), y la eleccion del tamano se borra al pasar a otra consola y volver",
+      "fix": "sube a @dotrino/terminal-agent 0.15.0"
+    },
     {
       "product": "vault",
       "versions": "<=0.33.2",
