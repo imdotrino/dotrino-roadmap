@@ -104,7 +104,7 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.10.0",
+        "current": "0.11.0",
         "protocol": 2,
         "requires": {
           "remote-agent": ">=0.12.0",
@@ -123,10 +123,10 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.1",
+        "current": "0.2.2",
         "protocol": 1,
         "requires": {
-          "terminal-agent": ">=0.10.0"
+          "terminal-agent": ">=0.11.0"
         }
       },
       "ia-agent": {
