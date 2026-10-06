@@ -93,7 +93,7 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.13.0",
+        "current": "0.14.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.92.0",
@@ -104,13 +104,21 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.15.1",
+        "current": "0.16.1",
         "protocol": 2,
         "requires": {
-          "remote-agent": ">=0.13.0",
+          "remote-agent": ">=0.14.0",
           "identity": ">=0.92.0",
           "vault": ">=0.79.0",
           "proxy-client": ">=0.23.1"
+        }
+      },
+      "terminal-ios": {
+        "repo": "imdotrino/dotrino-terminal",
+        "current": "0.8.6",
+        "protocol": 1,
+        "requires": {
+          "terminal-agent": ">=0.15.0"
         }
       },
       "terminal-android": {
@@ -123,7 +131,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.12",
+        "current": "0.2.13",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.11.0"
@@ -261,6 +269,24 @@ export const MANIFESTS = Object.freeze({
       }
     },
     "broken": [
+      {
+        "product": "terminal-agent",
+        "versions": "0.16.0",
+        "why": "el mismo fallo que la 0.15.x (salió sin el arreglo): un cambio de consola que falla (no-console) cierra la ventana, y una consola cerrada desde otra pantalla se lleva la ventana",
+        "fix": "sube a @dotrino/terminal-agent 0.16.1"
+      },
+      {
+        "product": "terminal-agent",
+        "versions": "0.15.1",
+        "why": "el cliente de la ventana trata como fatal que la consola pedida ya no exista (no-console): elegir en el panel una entrada caducada cierra la ventana; y si otra pantalla cierra la consola, la ventana se va sin forma de abrir otra",
+        "fix": "sube a @dotrino/terminal-agent 0.16.1"
+      },
+      {
+        "product": "terminal-agent",
+        "versions": "0.15.0",
+        "why": "el mismo fallo que la 0.15.1: un cambio de consola que falla (no-console) cierra la ventana, y una consola cerrada desde otra pantalla se lleva la ventana",
+        "fix": "sube a @dotrino/terminal-agent 0.16.1"
+      },
       {
         "product": "remote-agent",
         "versions": [
