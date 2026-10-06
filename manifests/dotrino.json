@@ -105,6 +105,14 @@
         "proxy-client": ">=0.23.1"
       }
     },
+    "terminal-ios": {
+      "repo": "imdotrino/dotrino-terminal",
+      "current": "0.8.6",
+      "protocol": 1,
+      "requires": {
+        "terminal-agent": ">=0.15.0"
+      }
+    },
     "terminal-android": {
       "repo": "imdotrino/dotrino-terminal",
       "current": "0.8.6",
