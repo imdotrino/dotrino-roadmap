@@ -85,7 +85,7 @@
     "remote-agent": {
       "repo": "imdotrino/dotrino-remote-agent",
       "npm": "@dotrino/remote-agent",
-      "current": "0.13.0",
+      "current": "0.14.0",
       "protocol": 1,
       "requires": {
         "identity": ">=0.92.0",
@@ -99,7 +99,7 @@
       "current": "0.16.1",
       "protocol": 2,
       "requires": {
-        "remote-agent": ">=0.13.0",
+        "remote-agent": ">=0.14.0",
         "identity": ">=0.92.0",
         "vault": ">=0.79.0",
         "proxy-client": ">=0.23.1"
