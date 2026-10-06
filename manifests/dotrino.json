@@ -96,7 +96,7 @@
     "terminal-agent": {
       "repo": "imdotrino/dotrino-terminal",
       "npm": "@dotrino/terminal-agent",
-      "current": "0.15.1",
+      "current": "0.16.1",
       "protocol": 2,
       "requires": {
         "remote-agent": ">=0.13.0",
@@ -123,7 +123,7 @@
     },
     "terminal-desktop": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.2.12",
+      "current": "0.2.13",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.11.0"
@@ -261,6 +261,24 @@
     }
   },
   "broken": [
+    {
+      "product": "terminal-agent",
+      "versions": "0.16.0",
+      "why": "el mismo fallo que la 0.15.x (salió sin el arreglo): un cambio de consola que falla (no-console) cierra la ventana, y una consola cerrada desde otra pantalla se lleva la ventana",
+      "fix": "sube a @dotrino/terminal-agent 0.16.1"
+    },
+    {
+      "product": "terminal-agent",
+      "versions": "0.15.1",
+      "why": "el cliente de la ventana trata como fatal que la consola pedida ya no exista (no-console): elegir en el panel una entrada caducada cierra la ventana; y si otra pantalla cierra la consola, la ventana se va sin forma de abrir otra",
+      "fix": "sube a @dotrino/terminal-agent 0.16.1"
+    },
+    {
+      "product": "terminal-agent",
+      "versions": "0.15.0",
+      "why": "el mismo fallo que la 0.15.1: un cambio de consola que falla (no-console) cierra la ventana, y una consola cerrada desde otra pantalla se lleva la ventana",
+      "fix": "sube a @dotrino/terminal-agent 0.16.1"
+    },
     {
       "product": "remote-agent",
       "versions": ["0.1.0", "0.2.0", "0.2.1", "0.3.0", "0.3.1", "0.3.2", "0.4.0", "0.4.1", "0.5.0", "0.5.1", "0.5.2", "0.5.3", "0.5.4", "0.6.0", "0.6.1", "0.6.2", "0.7.0", "0.7.1", "0.8.0", "0.9.0", "0.9.1", "0.9.2", "0.10.0", "0.11.0", "0.12.0", "0.12.1"],
