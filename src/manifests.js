@@ -8,8 +8,8 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 23,
-    "issued": "2026-09-21",
+    "seq": 24,
+    "issued": "2026-10-07",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
       "compat": {
@@ -22,7 +22,7 @@ export const MANIFESTS = Object.freeze({
       "env": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/env",
-        "current": "0.79.0",
+        "current": "0.80.0",
         "protocol": 1,
         "requires": {
           "vault": ">=0.70.0"
@@ -93,7 +93,7 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.15.1",
+        "current": "0.16.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.92.0",
@@ -104,18 +104,19 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.23.0",
+        "current": "0.25.0",
         "protocol": 2,
         "requires": {
-          "remote-agent": ">=0.15.0",
+          "remote-agent": ">=0.16.0",
           "identity": ">=0.92.0",
           "vault": ">=0.79.0",
-          "proxy-client": ">=0.29.0"
+          "proxy-client": ">=0.29.0",
+          "vaultd": ">=0.142.0"
         }
       },
       "terminal-ios": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.8.9",
+        "current": "0.8.10",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.15.0"
@@ -123,7 +124,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-android": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.8.9",
+        "current": "0.8.10",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.15.0"
@@ -131,7 +132,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.20",
+        "current": "0.2.23",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.11.0"
@@ -140,6 +141,7 @@ export const MANIFESTS = Object.freeze({
       "ia-agent": {
         "repo": "imdotrino/dotrino-ia",
         "npm": "@dotrino/ia-agent",
+        "deprecated": "2026-10-07: retired, replaced by terminal-agent (dotrino-terminal)",
         "current": "0.7.3",
         "protocol": 1,
         "requires": {
@@ -203,7 +205,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.79.0",
+        "current": "0.80.0",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -215,7 +217,7 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.141.1",
+        "current": "0.142.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.107.1",
@@ -248,7 +250,7 @@ export const MANIFESTS = Object.freeze({
       },
       "app": {
         "repo": "imdotrino/dotrino-app",
-        "current": "0.4.15",
+        "current": "0.4.16",
         "protocol": 1,
         "requires": {
           "proxy": "1.4.1+",
