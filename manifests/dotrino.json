@@ -133,6 +133,7 @@
     "ia-agent": {
       "repo": "imdotrino/dotrino-ia",
       "npm": "@dotrino/ia-agent",
+      "deprecated": "2026-10-07: retired, replaced by terminal-agent (dotrino-terminal)",
       "current": "0.7.3",
       "protocol": 1,
       "requires": {
