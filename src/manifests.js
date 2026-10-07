@@ -104,7 +104,7 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.19.0",
+        "current": "0.19.1",
         "protocol": 2,
         "requires": {
           "remote-agent": ">=0.14.0",
@@ -269,6 +269,12 @@ export const MANIFESTS = Object.freeze({
       }
     },
     "broken": [
+      {
+        "product": "terminal-agent",
+        "versions": "0.19.0",
+        "why": "salió a npm sin access.js (faltaba en files): dotrino-terminal no arranca (ERR_MODULE_NOT_FOUND) y la app de escritorio no ve perfiles",
+        "fix": "sube a @dotrino/terminal-agent 0.19.1"
+      },
       {
         "product": "terminal-agent",
         "versions": "0.16.0",
