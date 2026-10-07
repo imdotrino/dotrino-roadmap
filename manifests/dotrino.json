@@ -96,7 +96,7 @@
     "terminal-agent": {
       "repo": "imdotrino/dotrino-terminal",
       "npm": "@dotrino/terminal-agent",
-      "current": "0.20.0",
+      "current": "0.21.0",
       "protocol": 2,
       "requires": {
         "remote-agent": ">=0.14.0",
@@ -123,7 +123,7 @@
     },
     "terminal-desktop": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.2.19",
+      "current": "0.2.20",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.11.0"
