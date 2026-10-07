@@ -108,7 +108,7 @@
     },
     "terminal-ios": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.8.11",
+      "current": "0.8.13",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.15.0"
@@ -116,7 +116,7 @@
     },
     "terminal-android": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.8.11",
+      "current": "0.8.13",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.15.0"
@@ -124,7 +124,7 @@
     },
     "terminal-desktop": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.2.24",
+      "current": "0.2.25",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.11.0"
