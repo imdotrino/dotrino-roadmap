@@ -104,7 +104,7 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.29.0",
+        "current": "0.30.1",
         "protocol": 2,
         "requires": {
           "remote-agent": ">=0.18.0",
@@ -132,7 +132,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.25",
+        "current": "0.2.27",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.11.0"
@@ -142,7 +142,7 @@ export const MANIFESTS = Object.freeze({
         "repo": "imdotrino/dotrino-ia",
         "npm": "@dotrino/ia-agent",
         "deprecated": "2026-10-07: retired, replaced by terminal-agent (dotrino-terminal)",
-        "current": "0.7.3",
+        "current": "0.8.1",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.13.0",
@@ -153,7 +153,7 @@ export const MANIFESTS = Object.freeze({
       "content": {
         "repo": "imdotrino/dotrino-content",
         "npm": "@dotrino/content",
-        "current": "0.4.3",
+        "current": "0.5.1",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.13.0",
@@ -165,7 +165,7 @@ export const MANIFESTS = Object.freeze({
       "sealers": {
         "repo": "imdotrino/dotrino-sealers",
         "npm": "@dotrino/sealers",
-        "current": "0.8.1",
+        "current": "0.9.1",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.13.0",
@@ -205,7 +205,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.82.0",
+        "current": "0.82.1",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -217,7 +217,7 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.148.0",
+        "current": "0.148.1",
         "protocol": 1,
         "requires": {
           "identity": ">=0.107.1",
