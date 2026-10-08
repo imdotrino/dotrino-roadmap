@@ -22,7 +22,7 @@ export const MANIFESTS = Object.freeze({
       "env": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/env",
-        "current": "0.81.0",
+        "current": "0.82.1",
         "protocol": 1,
         "requires": {
           "vault": ">=0.70.0"
@@ -177,7 +177,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.2",
+        "current": "0.4.6",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -186,7 +186,7 @@ export const MANIFESTS = Object.freeze({
       "store": {
         "repo": "imdotrino/dotrino-store",
         "npm": "@dotrino/store",
-        "current": "0.12.2",
+        "current": "0.12.3",
         "protocol": 1,
         "requires": {
           "identity": ">=0.91.0",
