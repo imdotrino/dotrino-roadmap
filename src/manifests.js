@@ -83,7 +83,7 @@ export const MANIFESTS = Object.freeze({
       "proxy-client": {
         "repo": "imdotrino/dotrino-proxy-client",
         "npm": "@dotrino/proxy-client",
-        "current": "0.29.0",
+        "current": "0.30.0",
         "protocol": 2,
         "requires": {
           "identity": ">=0.53.0",
@@ -93,30 +93,30 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.16.0",
+        "current": "0.17.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.92.0",
           "vault": ">=0.64.0",
-          "proxy-client": ">=0.29.0"
+          "proxy-client": ">=0.30.0"
         }
       },
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.25.0",
+        "current": "0.28.0",
         "protocol": 2,
         "requires": {
-          "remote-agent": ">=0.16.0",
+          "remote-agent": ">=0.17.0",
           "identity": ">=0.92.0",
           "vault": ">=0.79.0",
-          "proxy-client": ">=0.29.0",
+          "proxy-client": ">=0.30.0",
           "vaultd": ">=0.142.0"
         }
       },
       "terminal-ios": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.8.10",
+        "current": "0.8.14",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.15.0"
@@ -124,7 +124,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-android": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.8.10",
+        "current": "0.8.14",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.15.0"
@@ -132,7 +132,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.23",
+        "current": "0.2.25",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.11.0"
@@ -217,11 +217,11 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.142.0",
+        "current": "0.144.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.107.1",
-          "proxy-client": ">=0.27.1",
+          "proxy-client": ">=0.30.0",
           "store": ">=0.11.0",
           "passmanager": ">=0.17.0",
           "compat": ">=0.4.0",
