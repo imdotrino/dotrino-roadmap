@@ -123,3 +123,7 @@ su librería. Cuando se haga, va como landing de servicio (CONVENCIONES §1.2).
 ## Licencia
 
 MIT.
+
+## Documentación de uso
+
+Está en el wiki: <https://wiki.dotrino.com/desarrollo/versiones/>
