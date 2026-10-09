@@ -53,4 +53,12 @@ if (!product) console.log(`! this package is not in the registry (${pkg.name || 
 const direct = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies, ...pkg.optionalDependencies })
 const r = checkInstalled(m, { product, installed: installedFromLock(lock), direct })
 console.log(formatReport(r, { product }))
+// §15: al final y por stderr. En CI se corre con `@latest`, así que ahí no dice nada; habla
+// en la máquina de quien lo instaló y se quedó con una lista de rotas vieja.
+const { printUpdateNotice } = await import('@dotrino/update/notice')
+const { version } = JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8'))
+await printUpdateNotice({
+  current: version, source: 'npm', pkg: '@dotrino/roadmap', product: 'dotrino-roadmap',
+  how: 'run it with: npx --yes @dotrino/roadmap@latest check'
+})
 process.exit(r.ok ? 0 : 1)

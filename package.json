@@ -1,6 +1,6 @@
 {
   "name": "@dotrino/roadmap",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "El registro común de compatibilidad del ecosistema Dotrino, como pieza de consulta.",
   "license": "MIT",
   "type": "module",
@@ -40,5 +40,8 @@
   ],
   "bin": {
     "dotrino-roadmap": "bin/dotrino-roadmap.js"
+  },
+  "dependencies": {
+    "@dotrino/update": "0.6.1"
   }
 }
