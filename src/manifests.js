@@ -177,7 +177,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.6",
+        "current": "0.4.7",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -271,6 +271,18 @@ export const MANIFESTS = Object.freeze({
       }
     },
     "broken": [
+      {
+        "product": "store",
+        "versions": "0.12.2",
+        "why": "el mismo fallo que la 0.12.1 (salió sin el arreglo): cuando la bóveda rechaza el respaldo, el motivo (error.reason) llega vacío al estado y a la barra",
+        "fix": "sube a @dotrino/store 0.12.3"
+      },
+      {
+        "product": "store",
+        "versions": "0.12.1",
+        "why": "se publicó diciendo que el estado del respaldo lleva el motivo del rechazo (error.reason), y el cambio que lo hace llegar no iba dentro: el motivo llega vacío",
+        "fix": "sube a @dotrino/store 0.12.3"
+      },
       {
         "product": "terminal-agent",
         "versions": "0.19.0",
