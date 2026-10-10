@@ -116,18 +116,18 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-ios": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.8.14",
+        "current": "0.10.0",
         "protocol": 1,
         "requires": {
-          "terminal-agent": ">=0.15.0"
+          "terminal-agent": ">=0.35.0"
         }
       },
       "terminal-android": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.8.14",
+        "current": "0.10.0",
         "protocol": 1,
         "requires": {
-          "terminal-agent": ">=0.15.0"
+          "terminal-agent": ">=0.35.0"
         }
       },
       "terminal-desktop": {
