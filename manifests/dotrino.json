@@ -242,12 +242,12 @@
     },
     "app": {
       "repo": "imdotrino/dotrino-app",
-      "current": "0.4.20",
+      "current": "0.4.21",
       "protocol": 1,
       "requires": {
         "proxy": "1.4.1+",
         "vaultd": ">=0.114.0",
-        "identity": ">=0.104.0"
+        "identity": ">=0.110.1"
       }
     },
     "social-bot": {
