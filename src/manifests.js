@@ -124,7 +124,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-android": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.12.3",
+        "current": "0.13.0",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
