@@ -75,7 +75,7 @@
     "proxy-client": {
       "repo": "imdotrino/dotrino-proxy-client",
       "npm": "@dotrino/proxy-client",
-      "current": "0.30.4",
+      "current": "0.31.0",
       "protocol": 2,
       "requires": {
         "identity": ">=0.53.0",
@@ -85,7 +85,7 @@
     "remote-agent": {
       "repo": "imdotrino/dotrino-remote-agent",
       "npm": "@dotrino/remote-agent",
-      "current": "0.18.2",
+      "current": "0.18.3",
       "protocol": 1,
       "requires": {
         "identity": ">=0.92.0",
@@ -96,13 +96,13 @@
     "terminal-agent": {
       "repo": "imdotrino/dotrino-terminal",
       "npm": "@dotrino/terminal-agent",
-      "current": "0.45.0",
+      "current": "0.46.0",
       "protocol": 2,
       "requires": {
-        "remote-agent": ">=0.18.1",
+        "remote-agent": ">=0.18.3",
         "identity": ">=0.92.0",
         "vault": ">=0.79.0",
-        "proxy-client": ">=0.30.0",
+        "proxy-client": ">=0.31.0",
         "vaultd": ">=0.142.0"
       }
     },
@@ -124,7 +124,7 @@
     },
     "terminal-desktop": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.2.68",
+      "current": "0.2.69",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.37.0"
