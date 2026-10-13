@@ -75,7 +75,7 @@
     "proxy-client": {
       "repo": "imdotrino/dotrino-proxy-client",
       "npm": "@dotrino/proxy-client",
-      "current": "0.31.0",
+      "current": "0.31.1",
       "protocol": 2,
       "requires": {
         "identity": ">=0.53.0",
@@ -96,13 +96,13 @@
     "terminal-agent": {
       "repo": "imdotrino/dotrino-terminal",
       "npm": "@dotrino/terminal-agent",
-      "current": "0.46.1",
+      "current": "0.46.2",
       "protocol": 2,
       "requires": {
         "remote-agent": ">=0.18.3",
         "identity": ">=0.92.0",
         "vault": ">=0.79.0",
-        "proxy-client": ">=0.31.0",
+        "proxy-client": ">=0.31.1",
         "vaultd": ">=0.142.0"
       }
     },
