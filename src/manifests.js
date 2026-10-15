@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.112.0",
+        "current": "0.114.0",
         "protocol": 1,
         "requires": {}
       },
@@ -194,13 +194,21 @@ export const MANIFESTS = Object.freeze({
           "vaultd": ">=0.115.0"
         }
       },
+      "theme": {
+        "repo": "imdotrino/dotrino-theme",
+        "npm": "@dotrino/theme",
+        "current": "0.1.0",
+        "protocol": 1,
+        "requires": {}
+      },
       "topbar": {
         "repo": "imdotrino/dotrino-topbar",
         "npm": "@dotrino/topbar",
-        "current": "0.15.3",
+        "current": "0.16.0",
         "protocol": 1,
         "requires": {
-          "identity": ">=0.96.1"
+          "identity": ">=0.96.1",
+          "theme": ">=0.1.0"
         }
       },
       "vault": {
