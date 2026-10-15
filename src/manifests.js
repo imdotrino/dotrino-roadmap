@@ -8,7 +8,7 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 26,
+    "seq": 27,
     "issued": "2026-10-15",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
@@ -70,6 +70,14 @@ export const MANIFESTS = Object.freeze({
         "protocol": 2,
         "requires": {
           "proxy": "1.1.0+"
+        }
+      },
+      "messenger-extension": {
+        "repo": "imdotrino/dotrino-messenger-extension",
+        "current": "1.9.0",
+        "protocol": 1,
+        "requires": {
+          "messenger": "0.1.0"
         }
       },
       "notifications": {
@@ -777,6 +785,12 @@ export const MANIFESTS = Object.freeze({
         ],
         "why": "quitar o cambiar la contraseña del perfil cambiaba la llave del perfil sin volver a sellar la maestra: tras reiniciar, el perfil decía «desbloqueado» y no podía volver a firmar el acta (con 0.140.0 se recupera poniendo la misma contraseña de antes)",
         "fix": "sube a @dotrino/vaultd 0.140.0"
+      },
+      {
+        "product": "messenger-extension",
+        "versions": "1.9.0",
+        "why": "no tiene UI propia: sus tres superficies son iframes a messenger.dotrino.com con ?embed=, y el soporte de ese modo (puente de identidad, espejo de conversaciones, cola de salida, aviso de DM) se quitó del messenger después de la 0.1.0; la PWA servida siempre es la última, así que el panel se inventa una cuenta en cada sitio y no recibe nada",
+        "fix": "no hay versión que funcione: hay que elegir el camino del README de dotrino-messenger-extension (extensión autónoma con los pilares, o un modo embed del ecosistema)"
       }
     ]
   }
