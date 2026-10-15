@@ -124,7 +124,7 @@
     "terminal-agent": {
       "repo": "imdotrino/dotrino-terminal",
       "npm": "@dotrino/terminal-agent",
-      "current": "0.46.4",
+      "current": "0.46.5",
       "protocol": 2,
       "requires": {
         "remote-agent": ">=0.18.3",
@@ -299,6 +299,18 @@
     }
   },
   "broken": [
+    {
+      "product": "terminal-agent",
+      "versions": "0.46.4",
+      "why": "manda la pantalla y el historial en trozos de 64 KB que sellados miden 122 KB: no caben en un mensaje del canal directo (64 KiB), el pilar los manda por el proxio y el trozo pequeño que sí va directo los adelanta; en el teléfono la pantalla queda a medio historial o pintada dos veces",
+      "fix": "sube a @dotrino/terminal-agent 0.46.5"
+    },
+    {
+      "product": "terminal-agent",
+      "versions": "0.46.3",
+      "why": "el mismo fallo que la 0.46.4 (trozos de 64 KB que no caben en el canal directo), y además el historial de la consola que se deja seguía saliendo tras cambiarse a otra",
+      "fix": "sube a @dotrino/terminal-agent 0.46.5"
+    },
     {
       "product": "store",
       "versions": "0.12.2",
