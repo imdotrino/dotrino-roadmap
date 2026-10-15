@@ -40,7 +40,7 @@
     "notifications": {
       "repo": "imdotrino/dotrino-notifications",
       "npm": "@dotrino/notifications",
-      "current": "0.5.0",
+      "current": "0.6.0",
       "protocol": 2,
       "requires": {
         "proxy-client": ">=0.20.0"
@@ -109,7 +109,7 @@
     },
     "terminal-ios": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.13.0",
+      "current": "0.13.2",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.37.0"
@@ -117,7 +117,7 @@
     },
     "terminal-android": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.13.0",
+      "current": "0.13.2",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.37.0"
@@ -125,7 +125,7 @@
     },
     "terminal-desktop": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.2.71",
+      "current": "0.2.72",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.37.0"
