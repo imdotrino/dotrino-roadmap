@@ -284,6 +284,15 @@ export const MANIFESTS = Object.freeze({
           "proxy-client": ">=0.13.0"
         }
       },
+      "passmanager-android": {
+        "repo": "imdotrino/dotrino-passmanager",
+        "current": "0.1.0",
+        "protocol": 1,
+        "requires": {
+          "proxy": "1.1.0+",
+          "vaultd": ">=0.125.0"
+        }
+      },
       "passmanager-ios": {
         "repo": "imdotrino/dotrino-passmanager",
         "current": "0.1.0",
