@@ -83,7 +83,7 @@
     "profile": {
       "repo": "imdotrino/dotrino-profile",
       "npm": "@dotrino/profile",
-      "current": "0.20.0",
+      "current": "0.20.1",
       "protocol": 1,
       "requires": {
         "identity": ">=0.33.0"
