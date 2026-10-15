@@ -8,8 +8,8 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 24,
-    "issued": "2026-10-07",
+    "seq": 25,
+    "issued": "2026-10-14",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
       "compat": {
@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.114.0",
+        "current": "0.114.1",
         "protocol": 1,
         "requires": {}
       },
@@ -45,10 +45,37 @@ export const MANIFESTS = Object.freeze({
           "identity": ">=0.53.0"
         }
       },
+      "messenger": {
+        "repo": "imdotrino/dotrino-messenger",
+        "current": "0.5.2",
+        "protocol": 2,
+        "requires": {
+          "identity": ">=0.108.0",
+          "proxy-client": ">=0.28.0",
+          "store": ">=0.12.3",
+          "proxy": "1.1.0+"
+        }
+      },
+      "messenger-android": {
+        "repo": "imdotrino/dotrino-messenger",
+        "current": "0.5.2",
+        "protocol": 2,
+        "requires": {
+          "proxy": "1.1.0+"
+        }
+      },
+      "messenger-ios": {
+        "repo": "imdotrino/dotrino-messenger",
+        "current": "0.5.2",
+        "protocol": 2,
+        "requires": {
+          "proxy": "1.1.0+"
+        }
+      },
       "notifications": {
         "repo": "imdotrino/dotrino-notifications",
         "npm": "@dotrino/notifications",
-        "current": "0.5.0",
+        "current": "0.6.0",
         "protocol": 2,
         "requires": {
           "proxy-client": ">=0.20.0"
@@ -64,7 +91,7 @@ export const MANIFESTS = Object.freeze({
       "profile": {
         "repo": "imdotrino/dotrino-profile",
         "npm": "@dotrino/profile",
-        "current": "0.20.0",
+        "current": "0.20.1",
         "protocol": 1,
         "requires": {
           "identity": ">=0.33.0"
@@ -105,7 +132,7 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.46.3",
+        "current": "0.46.5",
         "protocol": 2,
         "requires": {
           "remote-agent": ">=0.18.3",
@@ -117,7 +144,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-ios": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.13.0",
+        "current": "0.13.2",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -125,7 +152,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-android": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.13.0",
+        "current": "0.13.2",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -133,7 +160,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.71",
+        "current": "0.2.72",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -204,7 +231,7 @@ export const MANIFESTS = Object.freeze({
       "topbar": {
         "repo": "imdotrino/dotrino-topbar",
         "npm": "@dotrino/topbar",
-        "current": "0.16.0",
+        "current": "0.16.1",
         "protocol": 1,
         "requires": {
           "identity": ">=0.96.1",
@@ -280,6 +307,18 @@ export const MANIFESTS = Object.freeze({
       }
     },
     "broken": [
+      {
+        "product": "terminal-agent",
+        "versions": "0.46.4",
+        "why": "manda la pantalla y el historial en trozos de 64 KB que sellados miden 122 KB: no caben en un mensaje del canal directo (64 KiB), el pilar los manda por el proxio y el trozo pequeño que sí va directo los adelanta; en el teléfono la pantalla queda a medio historial o pintada dos veces",
+        "fix": "sube a @dotrino/terminal-agent 0.46.5"
+      },
+      {
+        "product": "terminal-agent",
+        "versions": "0.46.3",
+        "why": "el mismo fallo que la 0.46.4 (trozos de 64 KB que no caben en el canal directo), y además el historial de la consola que se deja seguía saliendo tras cambiarse a otra",
+        "fix": "sube a @dotrino/terminal-agent 0.46.5"
+      },
       {
         "product": "store",
         "versions": "0.12.2",
