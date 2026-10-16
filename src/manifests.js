@@ -8,7 +8,7 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 28,
+    "seq": 29,
     "issued": "2026-10-15",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.117.1",
+        "current": "0.117.2",
         "protocol": 1,
         "requires": {}
       },
@@ -47,11 +47,11 @@ export const MANIFESTS = Object.freeze({
       },
       "messenger": {
         "repo": "imdotrino/dotrino-messenger",
-        "current": "0.8.0",
+        "current": "0.8.1",
         "protocol": 2,
         "requires": {
           "identity": ">=0.117.0",
-          "proxy-client": ">=0.35.0",
+          "proxy-client": ">=0.36.1",
           "store": ">=0.12.3",
           "proxy": "1.6.1+"
         }
@@ -119,7 +119,7 @@ export const MANIFESTS = Object.freeze({
       "proxy-client": {
         "repo": "imdotrino/dotrino-proxy-client",
         "npm": "@dotrino/proxy-client",
-        "current": "0.35.0",
+        "current": "0.36.1",
         "protocol": 2,
         "requires": {
           "identity": ">=0.53.0",
@@ -250,7 +250,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.86.0",
+        "current": "0.86.1",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -266,7 +266,7 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.157.0",
+        "current": "0.158.1",
         "protocol": 1,
         "requires": {
           "identity": ">=0.116.0",
@@ -802,6 +802,12 @@ export const MANIFESTS = Object.freeze({
         "versions": "1.6.0",
         "why": "pasa a base64 los mensajes binarios para cruzar la malla, y una parte de 768 KB así pasa de la trama de 1 MB del otro nodo: el enlace se cae en cada reconexión al reenviarla y todo lo que va detrás entre los dos nodos se queda atascado",
         "fix": "websocket-proxy 1.6.1"
+      },
+      {
+        "product": "proxy-client",
+        "versions": "0.36.0",
+        "why": "por token frena los bytes por lo recordado de la identidad (que puede ser de antes de que el otro se actualizara), y no solo por lo que dijo esa conexión en su saludo",
+        "fix": "@dotrino/proxy-client 0.36.1"
       }
     ]
   }

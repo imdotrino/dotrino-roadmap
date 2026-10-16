@@ -1,6 +1,6 @@
 {
   "manifest": "dotrino",
-  "seq": 28,
+  "seq": 29,
   "issued": "2026-10-15",
   "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
   "products": {
@@ -23,7 +23,7 @@
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
-      "current": "0.117.1",
+      "current": "0.117.2",
       "protocol": 1,
       "requires": {}
     },
@@ -39,11 +39,11 @@
     },
     "messenger": {
       "repo": "imdotrino/dotrino-messenger",
-      "current": "0.8.0",
+      "current": "0.8.1",
       "protocol": 2,
       "requires": {
         "identity": ">=0.117.0",
-        "proxy-client": ">=0.35.0",
+        "proxy-client": ">=0.36.1",
         "store": ">=0.12.3",
         "proxy": "1.6.1+"
       }
@@ -111,7 +111,7 @@
     "proxy-client": {
       "repo": "imdotrino/dotrino-proxy-client",
       "npm": "@dotrino/proxy-client",
-      "current": "0.35.0",
+      "current": "0.36.1",
       "protocol": 2,
       "requires": {
         "identity": ">=0.53.0",
@@ -794,6 +794,12 @@
       "versions": "1.6.0",
       "why": "pasa a base64 los mensajes binarios para cruzar la malla, y una parte de 768 KB así pasa de la trama de 1 MB del otro nodo: el enlace se cae en cada reconexión al reenviarla y todo lo que va detrás entre los dos nodos se queda atascado",
       "fix": "websocket-proxy 1.6.1"
+    },
+    {
+      "product": "proxy-client",
+      "versions": "0.36.0",
+      "why": "por token frena los bytes por lo recordado de la identidad (que puede ser de antes de que el otro se actualizara), y no solo por lo que dijo esa conexión en su saludo",
+      "fix": "@dotrino/proxy-client 0.36.1"
     }
   ]
 }
