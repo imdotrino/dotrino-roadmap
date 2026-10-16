@@ -215,7 +215,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.25",
+        "current": "0.4.26",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -251,7 +251,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.88.0",
+        "current": "0.88.1",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -259,24 +259,24 @@ export const MANIFESTS = Object.freeze({
           "identity": ">=0.118.0",
           "opaque": ">=0.1.0",
           "compat": ">=0.4.0",
-          "roadmap": ">=0.4.20",
-          "passmanager": ">=0.18.1",
+          "roadmap": ">=0.4.26",
+          "passmanager": ">=0.18.3",
           "store": ">=0.11.0"
         }
       },
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.160.1",
+        "current": "0.160.2",
         "protocol": 1,
         "requires": {
           "identity": ">=0.118.0",
           "proxy-client": ">=0.36.1",
           "store": ">=0.11.0",
-          "passmanager": ">=0.18.1",
+          "passmanager": ">=0.18.3",
           "compat": ">=0.4.0",
           "opaque": ">=0.1.0",
-          "roadmap": ">=0.4.20"
+          "roadmap": ">=0.4.26"
         }
       },
       "verifier": {
@@ -291,7 +291,7 @@ export const MANIFESTS = Object.freeze({
       "passmanager": {
         "repo": "imdotrino/dotrino-passmanager",
         "npm": "@dotrino/passmanager",
-        "current": "0.18.2",
+        "current": "0.18.3",
         "protocol": 1,
         "requires": {
           "identity": ">=0.117.2",
@@ -304,7 +304,7 @@ export const MANIFESTS = Object.freeze({
         "protocol": 1,
         "requires": {
           "proxy": "1.1.0+",
-          "vaultd": ">=0.160.0"
+          "vaultd": ">=0.160.2"
         }
       },
       "passmanager-ios": {
@@ -834,6 +834,15 @@ export const MANIFESTS = Object.freeze({
         "versions": "0.36.0",
         "why": "por token frena los bytes por lo recordado de la identidad (que puede ser de antes de que el otro se actualizara), y no solo por lo que dijo esa conexión en su saludo",
         "fix": "@dotrino/proxy-client 0.36.1"
+      },
+      {
+        "product": "vaultd",
+        "versions": [
+          "0.160.0",
+          "0.160.1"
+        ],
+        "why": "la bóveda recordaba el sí de aprobación por aparato: después de aprobar un borrado, o de leer una contraseña, ese aparato podía borrar o pisar una passkey sin que se pidiera nada ni le llegara aviso a nadie",
+        "fix": "sube a @dotrino/vaultd 0.160.2"
       }
     ]
   }
