@@ -242,7 +242,7 @@
     "vault": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vault",
-      "current": "0.86.0",
+      "current": "0.86.1",
       "protocol": 1,
       "requires": {
         "vaultd": ">=0.105.0",
@@ -258,7 +258,7 @@
     "vaultd": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vaultd",
-      "current": "0.157.0",
+      "current": "0.158.1",
       "protocol": 1,
       "requires": {
         "identity": ">=0.116.0",
