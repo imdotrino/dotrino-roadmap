@@ -47,7 +47,7 @@ export const MANIFESTS = Object.freeze({
       },
       "messenger": {
         "repo": "imdotrino/dotrino-messenger",
-        "current": "0.5.2",
+        "current": "0.6.0",
         "protocol": 2,
         "requires": {
           "identity": ">=0.108.0",
@@ -107,12 +107,13 @@ export const MANIFESTS = Object.freeze({
       },
       "proxy": {
         "repo": "imdotrino/dotrino-proxy",
-        "current": "1.4.10",
+        "current": "1.5.0",
         "protocol": 2,
         "requires": {
           "vault": ">=0.86.0",
           "identity": ">=0.116.0",
-          "proxy-client": ">=0.23.1"
+          "proxy-client": ">=0.23.1",
+          "content": "0.5.3+"
         }
       },
       "proxy-client": {
@@ -189,7 +190,7 @@ export const MANIFESTS = Object.freeze({
       "content": {
         "repo": "imdotrino/dotrino-content",
         "npm": "@dotrino/content",
-        "current": "0.5.2",
+        "current": "0.5.3",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.13.0",
