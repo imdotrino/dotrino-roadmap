@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.115.0",
+        "current": "0.116.0",
         "protocol": 1,
         "requires": {}
       },
@@ -213,7 +213,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.8",
+        "current": "0.4.14",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -249,28 +249,32 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.85.0",
+        "current": "0.86.0",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
           "proxy-client": "0.24.0+",
-          "identity": ">=0.115.0",
-          "opaque": ">=0.1.0"
+          "identity": ">=0.116.0",
+          "opaque": ">=0.1.0",
+          "compat": ">=0.4.0",
+          "roadmap": ">=0.4.13",
+          "passmanager": ">=0.17.0",
+          "store": ">=0.11.0"
         }
       },
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.155.0",
+        "current": "0.156.0",
         "protocol": 1,
         "requires": {
-          "identity": ">=0.115.0",
+          "identity": ">=0.116.0",
           "proxy-client": ">=0.30.1",
           "store": ">=0.11.0",
           "passmanager": ">=0.17.0",
           "compat": ">=0.4.0",
           "opaque": ">=0.1.0",
-          "roadmap": ">=0.3.19"
+          "roadmap": ">=0.4.13"
         }
       },
       "verifier": {
@@ -312,12 +316,12 @@ export const MANIFESTS = Object.freeze({
       },
       "passmanager-extension": {
         "repo": "imdotrino/dotrino-passmanager",
-        "current": "0.48.4",
+        "current": "0.49.0",
         "protocol": 1,
         "requires": {
-          "identity": ">=0.109.0",
-          "proxy-client": ">=0.30.4",
-          "vault": ">=0.82.1",
+          "identity": ">=0.116.0",
+          "proxy-client": ">=0.32.2",
+          "vault": ">=0.86.0",
           "proxy": "1.1.0+"
         }
       },
