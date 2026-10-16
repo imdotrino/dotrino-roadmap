@@ -309,12 +309,12 @@
     },
     "passmanager-extension": {
       "repo": "imdotrino/dotrino-passmanager",
-      "current": "0.49.1",
+      "current": "0.51.0",
       "protocol": 1,
       "requires": {
-        "identity": ">=0.116.0",
-        "proxy-client": ">=0.32.2",
-        "vault": ">=0.86.0",
+        "identity": ">=0.117.2",
+        "proxy-client": ">=0.36.1",
+        "vault": ">=0.87.0",
         "proxy": "1.1.0+"
       }
     },
@@ -341,6 +341,30 @@
     }
   },
   "broken": [
+    {
+      "product": "passmanager-extension",
+      "versions": "0.50.0",
+      "why": "la página que pide una passkey decía ella misma de qué sitio era (rpId y origen salían del mensaje, no del remitente): un sitio cualquiera podía pedir la firma de la passkey de otro sitio guardada en Dotrino",
+      "fix": "sube a la extensión 0.51.0 (se actualiza sola desde pass.dotrino.com/app)"
+    },
+    {
+      "product": "passmanager-extension",
+      "versions": "0.49.1",
+      "why": "la página que pide una passkey decía ella misma de qué sitio era (rpId y origen salían del mensaje, no del remitente): un sitio cualquiera podía pedir la firma de la passkey de otro sitio guardada en Dotrino",
+      "fix": "sube a la extensión 0.51.0 (se actualiza sola desde pass.dotrino.com/app)"
+    },
+    {
+      "product": "passmanager-extension",
+      "versions": "0.49.0",
+      "why": "la página que pide una passkey decía ella misma de qué sitio era (rpId y origen salían del mensaje, no del remitente): un sitio cualquiera podía pedir la firma de la passkey de otro sitio guardada en Dotrino",
+      "fix": "sube a la extensión 0.51.0 (se actualiza sola desde pass.dotrino.com/app)"
+    },
+    {
+      "product": "passmanager-extension",
+      "versions": "0.48.4",
+      "why": "la página que pide una passkey decía ella misma de qué sitio era (rpId y origen salían del mensaje, no del remitente): un sitio cualquiera podía pedir la firma de la passkey de otro sitio guardada en Dotrino",
+      "fix": "sube a la extensión 0.51.0 (se actualiza sola desde pass.dotrino.com/app)"
+    },
     {
       "product": "terminal-agent",
       "versions": "0.46.4",
