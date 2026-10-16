@@ -107,12 +107,12 @@ export const MANIFESTS = Object.freeze({
       },
       "proxy": {
         "repo": "imdotrino/dotrino-proxy",
-        "current": "1.6.1",
+        "current": "1.6.2",
         "protocol": 2,
         "requires": {
-          "vault": ">=0.86.0",
-          "identity": ">=0.116.0",
-          "proxy-client": ">=0.23.1",
+          "vault": ">=0.87.0",
+          "identity": ">=0.117.2",
+          "proxy-client": ">=0.36.1",
           "content": "0.5.3+"
         }
       },
@@ -179,36 +179,37 @@ export const MANIFESTS = Object.freeze({
         "repo": "imdotrino/dotrino-ia",
         "npm": "@dotrino/ia-agent",
         "deprecated": "2026-10-07: retired, replaced by terminal-agent (dotrino-terminal)",
-        "current": "0.8.1",
+        "current": "0.9.0",
         "protocol": 1,
         "requires": {
-          "remote-agent": ">=0.13.0",
-          "identity": ">=0.92.0",
-          "vault": ">=0.75.0"
+          "remote-agent": ">=0.20.1",
+          "identity": ">=0.117.2",
+          "vault": ">=0.87.0",
+          "proxy-client": ">=0.36.1"
         }
       },
       "content": {
         "repo": "imdotrino/dotrino-content",
         "npm": "@dotrino/content",
-        "current": "0.5.3",
+        "current": "0.6.0",
         "protocol": 1,
         "requires": {
-          "remote-agent": ">=0.13.0",
-          "identity": ">=0.116.0",
-          "vault": ">=0.86.0",
-          "proxy-client": ">=0.23.1"
+          "remote-agent": ">=0.20.1",
+          "identity": ">=0.117.2",
+          "vault": ">=0.87.0",
+          "proxy-client": ">=0.36.1"
         }
       },
       "sealers": {
         "repo": "imdotrino/dotrino-sealers",
         "npm": "@dotrino/sealers",
-        "current": "0.9.2",
+        "current": "0.10.0",
         "protocol": 1,
         "requires": {
-          "remote-agent": ">=0.13.0",
-          "identity": ">=0.116.0",
-          "vault": ">=0.86.0",
-          "proxy-client": ">=0.23.1"
+          "remote-agent": ">=0.20.1",
+          "identity": ">=0.117.2",
+          "vault": ">=0.87.0",
+          "proxy-client": ">=0.36.1"
         }
       },
       "roadmap": {
@@ -338,13 +339,13 @@ export const MANIFESTS = Object.freeze({
       },
       "social-bot": {
         "repo": "imdotrino/dotrino-social-bot",
-        "current": "0.2.1",
+        "current": "0.3.0",
         "protocol": 1,
         "requires": {
-          "vault": ">=0.86.0",
-          "identity": ">=0.116.0",
-          "proxy-client": ">=0.23.1",
-          "remote-agent": ">=0.13.0"
+          "vault": ">=0.87.0",
+          "identity": ">=0.117.2",
+          "proxy-client": ">=0.36.1",
+          "remote-agent": ">=0.20.1"
         }
       }
     },
