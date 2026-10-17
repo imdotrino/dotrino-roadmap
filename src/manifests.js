@@ -196,8 +196,8 @@ export const MANIFESTS = Object.freeze({
         "current": "0.6.1",
         "protocol": 1,
         "requires": {
-          "remote-agent": ">=0.20.1",
-          "identity": ">=0.117.2",
+          "remote-agent": ">=0.22.0",
+          "identity": ">=0.120.0",
           "vault": ">=0.87.0",
           "proxy-client": ">=0.36.1"
         }
