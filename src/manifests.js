@@ -340,6 +340,16 @@ export const MANIFESTS = Object.freeze({
           "identity": ">=0.110.1"
         }
       },
+      "app-ios": {
+        "repo": "imdotrino/dotrino-app",
+        "current": "0.4.13",
+        "protocol": 1,
+        "requires": {
+          "proxy": "1.4.7+",
+          "vaultd": ">=0.114.0",
+          "identity": ">=0.110.1"
+        }
+      },
       "social-bot": {
         "repo": "imdotrino/dotrino-social-bot",
         "current": "0.3.0",
