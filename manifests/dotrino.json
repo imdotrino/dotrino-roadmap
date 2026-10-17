@@ -77,7 +77,7 @@
     "notifications": {
       "repo": "imdotrino/dotrino-notifications",
       "npm": "@dotrino/notifications",
-      "current": "0.6.0",
+      "current": "0.7.0",
       "protocol": 2,
       "requires": {
         "proxy-client": ">=0.20.0"
