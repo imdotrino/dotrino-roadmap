@@ -215,7 +215,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.28",
+        "current": "0.4.29",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -251,7 +251,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.88.1",
+        "current": "0.88.2",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -260,20 +260,20 @@ export const MANIFESTS = Object.freeze({
           "opaque": ">=0.1.0",
           "compat": ">=0.4.0",
           "roadmap": ">=0.4.26",
-          "passmanager": ">=0.18.3",
+          "passmanager": ">=0.18.4",
           "store": ">=0.11.0"
         }
       },
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.160.2",
+        "current": "0.160.3",
         "protocol": 1,
         "requires": {
           "identity": ">=0.118.0",
           "proxy-client": ">=0.36.1",
           "store": ">=0.11.0",
-          "passmanager": ">=0.18.3",
+          "passmanager": ">=0.18.4",
           "compat": ">=0.4.0",
           "opaque": ">=0.1.0",
           "roadmap": ">=0.4.26"
@@ -291,7 +291,7 @@ export const MANIFESTS = Object.freeze({
       "passmanager": {
         "repo": "imdotrino/dotrino-passmanager",
         "npm": "@dotrino/passmanager",
-        "current": "0.18.3",
+        "current": "0.18.4",
         "protocol": 1,
         "requires": {
           "identity": ">=0.117.2",
@@ -318,7 +318,7 @@ export const MANIFESTS = Object.freeze({
       },
       "passmanager-extension": {
         "repo": "imdotrino/dotrino-passmanager",
-        "current": "0.53.2",
+        "current": "0.53.3",
         "protocol": 1,
         "requires": {
           "identity": ">=0.118.0",
