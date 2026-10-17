@@ -318,7 +318,7 @@ export const MANIFESTS = Object.freeze({
       },
       "passmanager-extension": {
         "repo": "imdotrino/dotrino-passmanager",
-        "current": "0.53.3",
+        "current": "0.53.4",
         "protocol": 1,
         "requires": {
           "identity": ">=0.118.0",
