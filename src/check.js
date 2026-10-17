@@ -71,17 +71,17 @@ export function checkInstalled (m, { product = null, installed = [], direct = nu
   }
 
   if (product) {
-    const ficha = m?.products?.[product]
-    if (!ficha) {
+    const entry = m?.products?.[product]
+    if (!entry) {
       problems.push({ kind: 'unknown-product', product })
     } else {
-      const requires = ficha.requires || {}
+      const requires = entry.requires || {}
       const top = installed.filter((d) => d.path === `node_modules/${d.name}` && (!direct || direct.includes(d.name)))
-      for (const [peer, rango] of Object.entries(requires)) {
+      for (const [peer, range] of Object.entries(requires)) {
         const npm = m.products[peer]?.npm
         const dep = npm && top.find((d) => d.name === npm)
         if (!dep) continue   // lo pide a otra pieza en marcha, no como dependencia
-        if (!satisfies(dep.version, rango)) problems.push({ kind: 'requires', dep: npm, version: dep.version, range: rango, product })
+        if (!satisfies(dep.version, range)) problems.push({ kind: 'requires', dep: npm, version: dep.version, range: range, product })
       }
       for (const dep of top) {
         const peer = productByNpm(m, dep.name)

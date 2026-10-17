@@ -36,9 +36,9 @@ test('la librería no toca el disco: los manifiestos van dentro del código', as
   const src = fs.readFileSync(fileURLToPath(new URL('../src/index.js', import.meta.url)), 'utf8')
   // Sin comentarios: el porqué de esto SE EXPLICA ahí arriba nombrando lo prohibido, y
   // buscar en la prosa haría fallar al archivo por explicarse bien.
-  const codigo = src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '')
-  for (const prohibido of ['node:fs', 'node:path', 'node:url', 'readFileSync', 'import.meta.url']) {
-    assert.ok(!codigo.includes(prohibido), `src/index.js no puede usar ${prohibido}`)
+  const code = src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '')
+  for (const banned of ['node:fs', 'node:path', 'node:url', 'readFileSync', 'import.meta.url']) {
+    assert.ok(!code.includes(banned), `src/index.js no puede usar ${banned}`)
   }
 })
 
@@ -72,11 +72,11 @@ test('cada producto trae versión con forma, protocolo y repo', () => {
 test('los rangos que exige cada producto se entienden', () => {
   for (const p of products(m)) {
     const req = productOf(m, p).requires || {}
-    for (const [peer, rango] of Object.entries(req)) {
+    for (const [peer, range] of Object.entries(req)) {
       assert.ok(products(m).includes(peer), `${p} exige a "${peer}", que el registro no conoce`)
       // Un rango que no se entiende contesta `false` a TODO, y eso pasa por «incompatible».
-      assert.equal(satisfies(currentOf(m, peer), rango), true,
-        `${p} exige ${peer} ${rango} y la vigente es ${currentOf(m, peer)}: o el rango está mal, o el registro está atrasado`)
+      assert.equal(satisfies(currentOf(m, peer), range), true,
+        `${p} exige ${peer} ${range} y la vigente es ${currentOf(m, peer)}: o el rango está mal, o el registro está atrasado`)
     }
   }
 })
@@ -96,12 +96,12 @@ test('meets: sin exigencia se cumple; con exigencia se comprueba', () => {
     'no exigir es una decisión, no una laguna')
   // El mínimo de verdad, no uno escrito aquí: el manifiesto lo sube y la prueba no puede
   // quedarse con el de hace meses (pasó con 0.3.6, cuando vaultd pasó a pedir 0.101.0).
-  const minimo = requirementFor(m, 'vaultd', 'identity').replace(/^>=/, '')
-  const bien = meets(m, { product: 'vaultd', peer: 'identity', version: minimo })
-  assert.equal(bien.ok, true)
-  const mal = meets(m, { product: 'vaultd', peer: 'identity', version: '0.50.0' })
-  assert.equal(mal.ok, false)
-  assert.match(mal.reason, /vaultd needs identity/)
+  const minimum = requirementFor(m, 'vaultd', 'identity').replace(/^>=/, '')
+  const good = meets(m, { product: 'vaultd', peer: 'identity', version: minimum })
+  assert.equal(good.ok, true)
+  const bad = meets(m, { product: 'vaultd', peer: 'identity', version: '0.50.0' })
+  assert.equal(bad.ok, false)
+  assert.match(bad.reason, /vaultd needs identity/)
 })
 
 test('preguntar por quien no está en el registro no puede salir que sí', () => {
