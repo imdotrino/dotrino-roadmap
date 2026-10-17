@@ -215,7 +215,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.26",
+        "current": "0.4.27",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -318,14 +318,14 @@ export const MANIFESTS = Object.freeze({
       },
       "passmanager-extension": {
         "repo": "imdotrino/dotrino-passmanager",
-        "current": "0.53.1",
+        "current": "0.53.2",
         "protocol": 1,
         "requires": {
           "identity": ">=0.118.0",
           "proxy-client": ">=0.36.1",
           "vault": ">=0.88.0",
           "proxy": "1.1.0+",
-          "vaultd": ">=0.160.0"
+          "vaultd": ">=0.160.2"
         }
       },
       "app": {
