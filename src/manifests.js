@@ -155,7 +155,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-ios": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.13.2",
+        "current": "0.13.7",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -163,7 +163,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-android": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.13.4",
+        "current": "0.13.7",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -171,7 +171,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.79",
+        "current": "0.2.80",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -269,7 +269,7 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.165.1",
+        "current": "0.165.3",
         "protocol": 1,
         "requires": {
           "identity": ">=0.118.0",
