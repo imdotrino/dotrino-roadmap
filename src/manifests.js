@@ -375,7 +375,7 @@ export const MANIFESTS = Object.freeze({
       "ai": {
         "repo": "imdotrino/dotrino-ai",
         "npm": "@dotrino/ai",
-        "current": "0.1.0",
+        "current": "0.1.1",
         "protocol": 1,
         "requires": {}
       }
