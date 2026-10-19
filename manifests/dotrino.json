@@ -324,22 +324,22 @@
     },
     "app": {
       "repo": "imdotrino/dotrino-app",
-      "current": "0.4.24",
+      "current": "0.4.25",
       "protocol": 1,
       "requires": {
-        "proxy": "1.4.7+",
-        "vaultd": ">=0.114.0",
-        "identity": ">=0.110.1"
+        "proxy": "1.6.0+",
+        "vaultd": ">=0.159.0",
+        "identity": ">=0.117.2"
       }
     },
     "app-ios": {
       "repo": "imdotrino/dotrino-app",
-      "current": "0.4.14",
+      "current": "0.4.15",
       "protocol": 1,
       "requires": {
-        "proxy": "1.4.7+",
-        "vaultd": ">=0.114.0",
-        "identity": ">=0.110.1"
+        "proxy": "1.6.0+",
+        "vaultd": ">=0.159.0",
+        "identity": ">=0.117.2"
       }
     },
     "social-bot": {
