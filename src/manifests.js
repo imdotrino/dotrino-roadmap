@@ -8,7 +8,7 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 34,
+    "seq": 35,
     "issued": "2026-10-18",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
@@ -143,13 +143,13 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.48.0",
+        "current": "0.49.0",
         "protocol": 2,
         "requires": {
-          "remote-agent": ">=0.20.1",
-          "identity": ">=0.117.2",
-          "vault": ">=0.87.0",
-          "proxy-client": ">=0.36.1",
+          "remote-agent": ">=0.22.4",
+          "identity": ">=0.121.6",
+          "vault": ">=0.93.0",
+          "proxy-client": ">=0.38.4",
           "vaultd": ">=0.142.0"
         }
       },
