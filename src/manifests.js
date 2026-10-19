@@ -171,7 +171,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.78",
+        "current": "0.2.79",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -364,13 +364,13 @@ export const MANIFESTS = Object.freeze({
       "accounts": {
         "repo": "imdotrino/dotrino-accounts",
         "npm": null,
-        "current": "0.1.0",
+        "current": "0.2.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.116.0",
           "remote-agent": ">=0.19.0",
           "vault": ">=0.93.1",
-          "pay": ">=0.1.0"
+          "pay": ">=0.2.0"
         }
       },
       "ai": {
@@ -383,7 +383,7 @@ export const MANIFESTS = Object.freeze({
       "pay": {
         "repo": "imdotrino/dotrino-pay",
         "npm": "@dotrino/pay",
-        "current": "0.1.0",
+        "current": "0.2.0",
         "protocol": 1,
         "requires": {}
       }
