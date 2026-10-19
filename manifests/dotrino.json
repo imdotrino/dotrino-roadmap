@@ -324,7 +324,7 @@
     },
     "app": {
       "repo": "imdotrino/dotrino-app",
-      "current": "0.4.23",
+      "current": "0.4.24",
       "protocol": 1,
       "requires": {
         "proxy": "1.4.7+",
