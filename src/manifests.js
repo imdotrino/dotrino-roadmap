@@ -388,6 +388,18 @@ export const MANIFESTS = Object.freeze({
         "protocol": 1,
         "requires": {}
       },
+      "expenses-agent": {
+        "repo": "imdotrino/dotrino-expenses-agent",
+        "npm": "@dotrino/expenses-agent",
+        "current": "0.1.1",
+        "protocol": 1,
+        "requires": {
+          "remote-agent": ">=0.23.1",
+          "vault": ">=0.96.0",
+          "update": ">=0.9.2",
+          "vaultd": ">=0.154.0"
+        }
+      },
       "pay": {
         "repo": "imdotrino/dotrino-pay",
         "npm": "@dotrino/pay",
