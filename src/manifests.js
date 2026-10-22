@@ -381,6 +381,13 @@ export const MANIFESTS = Object.freeze({
         "protocol": 1,
         "requires": {}
       },
+      "dictation": {
+        "repo": "imdotrino/dotrino-dictation",
+        "npm": "@dotrino/dictation",
+        "current": "0.1.1",
+        "protocol": 1,
+        "requires": {}
+      },
       "pay": {
         "repo": "imdotrino/dotrino-pay",
         "npm": "@dotrino/pay",
