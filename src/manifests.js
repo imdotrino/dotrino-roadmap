@@ -391,7 +391,7 @@ export const MANIFESTS = Object.freeze({
       "expenses-agent": {
         "repo": "imdotrino/dotrino-expenses-agent",
         "npm": "@dotrino/expenses-agent",
-        "current": "0.1.1",
+        "current": "0.1.2",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.23.1",
