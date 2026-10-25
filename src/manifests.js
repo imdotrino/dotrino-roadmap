@@ -8,8 +8,8 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 46,
-    "issued": "2026-10-25T18:38:21.193Z",
+    "seq": 47,
+    "issued": "2026-10-25T19:07:53.892Z",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
       "compat": {
@@ -49,14 +49,14 @@ export const MANIFESTS = Object.freeze({
       },
       "messenger": {
         "repo": "imdotrino/dotrino-messenger",
-        "current": "0.8.2",
+        "current": "0.8.3",
         "protocol": 2,
         "requires": {
           "identity": ">=0.117.0",
-          "proxy-client": ">=0.44.0",
+          "proxy-client": ">=0.45.1",
           "store": ">=0.12.3",
           "proxy": "1.6.1+",
-          "profile": ">=0.21.0"
+          "profile": ">=0.21.1"
         }
       },
       "messenger-android": {
@@ -102,7 +102,7 @@ export const MANIFESTS = Object.freeze({
       "profile": {
         "repo": "imdotrino/dotrino-profile",
         "npm": "@dotrino/profile",
-        "current": "0.21.0",
+        "current": "0.21.1",
         "protocol": 1,
         "requires": {
           "identity": ">=0.33.0",
@@ -123,7 +123,7 @@ export const MANIFESTS = Object.freeze({
       "proxy-client": {
         "repo": "imdotrino/dotrino-proxy-client",
         "npm": "@dotrino/proxy-client",
-        "current": "0.45.0",
+        "current": "0.45.1",
         "protocol": 2,
         "requires": {
           "identity": ">=0.53.0",
