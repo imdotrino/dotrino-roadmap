@@ -8,8 +8,8 @@
 export const MANIFESTS = Object.freeze({
   "dotrino": {
     "manifest": "dotrino",
-    "seq": 47,
-    "issued": "2026-10-25T19:07:53.892Z",
+    "seq": 48,
+    "issued": "2026-10-26T16:51:22.453Z",
     "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
     "products": {
       "compat": {
@@ -140,6 +140,20 @@ export const MANIFESTS = Object.freeze({
           "vault": ">=0.85.0",
           "proxy-client": ">=0.36.1",
           "vaultd": ">=0.154.0"
+        }
+      },
+      "tunnel": {
+        "repo": "imdotrino/dotrino-tunnel",
+        "npm": "@dotrino/tunnel",
+        "current": "0.2.0",
+        "protocol": 2,
+        "requires": {
+          "identity": ">=0.127.0",
+          "remote-agent": ">=0.25.0",
+          "vault": ">=0.104.0",
+          "proxy-client": ">=0.44.1",
+          "store": ">=0.12.3",
+          "update": ">=0.7.0"
         }
       },
       "terminal-agent": {
@@ -1130,6 +1144,22 @@ export const MANIFESTS = Object.freeze({
         ],
         "why": "un pedido de contraseñas de un aparato sin llave de cifrado en el acta lanzaba no-encpub fuera del manejador del socket y cerraba el proceso de la bóveda",
         "fix": "sube a @dotrino/passmanager 0.18.6"
+      },
+      {
+        "product": "tunnel",
+        "versions": [
+          "0.1.0",
+          "0.1.1",
+          "0.1.2",
+          "0.1.3",
+          "0.1.4",
+          "0.1.5",
+          "0.1.6",
+          "0.1.7",
+          "0.1.8"
+        ],
+        "why": "la llave de la URL la elegía cualquiera y el relay no pedía prueba: quien la supiera se conectaba como agente, echaba al legítimo y se quedaba con sus peticiones. El relay (2026-10-26) ya no las acepta",
+        "fix": "sube a @dotrino/tunnel 0.2.0 y enrola cada túnel en tu bóveda (dotrino-tunnel enroll [--name n]); la dirección cambia"
       }
     ]
   }
