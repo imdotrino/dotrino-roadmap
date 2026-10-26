@@ -1,7 +1,7 @@
 {
   "manifest": "dotrino",
-  "seq": 48,
-  "issued": "2026-10-26T16:51:22.453Z",
+  "seq": 49,
+  "issued": "2026-10-26T17:10:35.872Z",
   "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
   "products": {
     "compat": {
@@ -137,7 +137,7 @@
     "tunnel": {
       "repo": "imdotrino/dotrino-tunnel",
       "npm": "@dotrino/tunnel",
-      "current": "0.2.0",
+      "current": "0.3.0",
       "protocol": 2,
       "requires": {
         "identity": ">=0.127.0",
@@ -145,7 +145,7 @@
         "vault": ">=0.104.0",
         "proxy-client": ">=0.44.1",
         "store": ">=0.12.3",
-        "update": ">=0.7.0"
+        "update": ">=0.9.2"
       }
     },
     "terminal-agent": {
