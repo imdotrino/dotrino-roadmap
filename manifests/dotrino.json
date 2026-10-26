@@ -23,7 +23,7 @@
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
-      "current": "0.126.5",
+      "current": "0.127.1",
       "protocol": 1,
       "requires": {
         "proxy-client": ">=0.13.1"
@@ -247,33 +247,34 @@
     "vault": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vault",
-      "current": "0.103.2",
+      "current": "0.104.0",
       "protocol": 1,
       "requires": {
         "vaultd": ">=0.105.0",
         "proxy-client": ">=0.44.1",
-        "identity": ">=0.126.0",
+        "identity": ">=0.127.0",
         "opaque": ">=0.1.0",
         "compat": ">=0.4.0",
         "roadmap": ">=0.4.26",
-        "passmanager": ">=0.18.4",
+        "passmanager": ">=0.18.6",
         "store": ">=0.12.3"
       }
     },
     "vaultd": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vaultd",
-      "current": "0.175.2",
+      "current": "0.176.1",
       "protocol": 1,
       "requires": {
-        "identity": ">=0.126.3",
+        "identity": ">=0.127.0",
         "proxy-client": ">=0.44.1",
         "store": ">=0.11.0",
-        "passmanager": ">=0.18.4",
+        "passmanager": ">=0.18.6",
         "compat": ">=0.4.0",
         "opaque": ">=0.1.0",
         "roadmap": ">=0.4.58",
-        "remote-agent": ">=0.24.0"
+        "remote-agent": ">=0.24.0",
+        "update": ">=0.9.0"
       }
     },
     "verifier": {
@@ -327,7 +328,7 @@
     },
     "app": {
       "repo": "imdotrino/dotrino-app",
-      "current": "0.4.27",
+      "current": "0.4.29",
       "protocol": 1,
       "requires": {
         "proxy": "1.6.0+",
