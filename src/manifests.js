@@ -382,14 +382,15 @@ export const MANIFESTS = Object.freeze({
       "accounts": {
         "repo": "imdotrino/dotrino-accounts",
         "npm": null,
-        "current": "0.6.1",
+        "current": "0.7.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.121.7",
           "remote-agent": ">=0.24.0",
           "vault": ">=0.96.0",
           "pay": ">=0.2.0",
-          "vaultd": ">=0.168.0"
+          "vaultd": ">=0.168.0",
+          "update": ">=0.9.2"
         }
       },
       "ai": {
