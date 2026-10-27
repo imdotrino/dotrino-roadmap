@@ -23,7 +23,7 @@
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
-      "current": "0.130.4",
+      "current": "0.132.0",
       "protocol": 1,
       "requires": {
         "proxy-client": ">=0.13.1"
@@ -263,12 +263,12 @@
     "vault": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vault",
-      "current": "0.109.0",
+      "current": "0.111.0",
       "protocol": 1,
       "requires": {
         "vaultd": ">=0.105.0",
         "proxy-client": ">=0.44.1",
-        "identity": ">=0.130.4",
+        "identity": ">=0.132.0",
         "opaque": ">=0.1.0",
         "compat": ">=0.5.0",
         "roadmap": ">=0.4.26",
@@ -279,10 +279,10 @@
     "vaultd": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vaultd",
-      "current": "0.182.0",
+      "current": "0.184.0",
       "protocol": 1,
       "requires": {
-        "identity": ">=0.130.4",
+        "identity": ">=0.132.0",
         "proxy-client": ">=0.44.1",
         "store": ">=0.11.0",
         "passmanager": ">=0.18.6",
@@ -1155,6 +1155,36 @@
       ],
       "why": "la llave de la URL la elegía cualquiera y el relay no pedía prueba: quien la supiera se conectaba como agente, echaba al legítimo y se quedaba con sus peticiones. El relay (2026-10-26) ya no las acepta",
       "fix": "sube a @dotrino/tunnel 0.2.0 y enrola cada túnel en tu bóveda (dotrino-tunnel enroll [--name n]); la dirección cambia"
+    },
+    {
+      "product": "identity",
+      "versions": "0.130.4",
+      "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+    },
+    {
+      "product": "identity",
+      "versions": "0.130.5",
+      "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+    },
+    {
+      "product": "identity",
+      "versions": "0.130.6",
+      "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+    },
+    {
+      "product": "vaultd",
+      "versions": "0.182.0",
+      "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+    },
+    {
+      "product": "vaultd",
+      "versions": "0.182.1",
+      "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+    },
+    {
+      "product": "vaultd",
+      "versions": "0.182.2",
+      "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
     }
   ]
 }
