@@ -1167,32 +1167,38 @@ export const MANIFESTS = Object.freeze({
       {
         "product": "identity",
         "versions": "0.130.4",
-        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)",
+        "fix": "sube a @dotrino/identity 0.132.0"
       },
       {
         "product": "identity",
         "versions": "0.130.5",
-        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)",
+        "fix": "sube a @dotrino/identity 0.132.0"
       },
       {
         "product": "identity",
         "versions": "0.130.6",
-        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)",
+        "fix": "sube a @dotrino/identity 0.132.0"
       },
       {
         "product": "vaultd",
         "versions": "0.182.0",
-        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)",
+        "fix": "actualiza la bóveda a 0.184.0 (dotrino-vault update)"
       },
       {
         "product": "vaultd",
         "versions": "0.182.1",
-        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)",
+        "fix": "actualiza la bóveda a 0.184.0 (dotrino-vault update)"
       },
       {
         "product": "vaultd",
         "versions": "0.182.2",
-        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)"
+        "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)",
+        "fix": "actualiza la bóveda a 0.184.0 (dotrino-vault update)"
       }
     ]
   }
