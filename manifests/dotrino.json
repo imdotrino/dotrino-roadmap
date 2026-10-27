@@ -41,7 +41,7 @@
     },
     "messenger": {
       "repo": "imdotrino/dotrino-messenger",
-      "current": "0.8.3",
+      "current": "0.8.5",
       "protocol": 2,
       "requires": {
         "identity": ">=0.117.0",
