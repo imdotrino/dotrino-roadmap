@@ -332,7 +332,7 @@
     },
     "passmanager-extension": {
       "repo": "imdotrino/dotrino-passmanager",
-      "current": "0.58.2",
+      "current": "0.58.3",
       "protocol": 1,
       "requires": {
         "identity": ">=0.128.0",
