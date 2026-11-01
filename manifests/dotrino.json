@@ -203,13 +203,14 @@
     "content": {
       "repo": "imdotrino/dotrino-content",
       "npm": "@dotrino/content",
-      "current": "0.7.0",
+      "current": "0.7.1",
       "protocol": 1,
       "requires": {
         "remote-agent": ">=0.24.0",
         "identity": ">=0.126.2",
         "vault": ">=0.87.0",
-        "proxy-client": ">=0.42.1"
+        "proxy-client": ">=0.42.1",
+        "update": ">=0.9.0"
       }
     },
     "sealers": {
