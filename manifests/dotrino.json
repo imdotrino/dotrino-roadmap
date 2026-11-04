@@ -125,7 +125,7 @@
     "remote-agent": {
       "repo": "imdotrino/dotrino-remote-agent",
       "npm": "@dotrino/remote-agent",
-      "current": "0.27.0",
+      "current": "0.29.0",
       "protocol": 1,
       "requires": {
         "identity": ">=0.121.7",
@@ -138,11 +138,11 @@
     "tunnel": {
       "repo": "imdotrino/dotrino-tunnel",
       "npm": "@dotrino/tunnel",
-      "current": "0.3.0",
+      "current": "0.4.0",
       "protocol": 2,
       "requires": {
         "identity": ">=0.127.0",
-        "remote-agent": ">=0.25.0",
+        "remote-agent": ">=0.29.0",
         "vault": ">=0.104.0",
         "proxy-client": ">=0.44.1",
         "store": ">=0.12.3",
