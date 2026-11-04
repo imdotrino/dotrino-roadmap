@@ -146,7 +146,7 @@ export const MANIFESTS = Object.freeze({
       "tunnel": {
         "repo": "imdotrino/dotrino-tunnel",
         "npm": "@dotrino/tunnel",
-        "current": "0.4.0",
+        "current": "0.5.0",
         "protocol": 2,
         "requires": {
           "identity": ">=0.127.0",
@@ -189,7 +189,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.86",
+        "current": "0.2.89",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
