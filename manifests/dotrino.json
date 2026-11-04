@@ -181,7 +181,7 @@
     },
     "terminal-desktop": {
       "repo": "imdotrino/dotrino-terminal",
-      "current": "0.2.85",
+      "current": "0.2.86",
       "protocol": 1,
       "requires": {
         "terminal-agent": ">=0.37.0"
