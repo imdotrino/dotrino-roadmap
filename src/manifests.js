@@ -133,11 +133,11 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.29.0",
+        "current": "0.30.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.121.7",
-          "vault": ">=0.90.0",
+          "vault": ">=0.115.0",
           "proxy-client": ">=0.36.1",
           "vaultd": ">=0.154.0",
           "compat": ">=0.5.0"
@@ -146,12 +146,12 @@ export const MANIFESTS = Object.freeze({
       "tunnel": {
         "repo": "imdotrino/dotrino-tunnel",
         "npm": "@dotrino/tunnel",
-        "current": "0.5.0",
+        "current": "0.5.2",
         "protocol": 2,
         "requires": {
           "identity": ">=0.127.0",
-          "remote-agent": ">=0.29.0",
-          "vault": ">=0.104.0",
+          "remote-agent": ">=0.30.0",
+          "vault": ">=0.115.0",
           "proxy-client": ">=0.44.1",
           "store": ">=0.12.3",
           "update": ">=0.9.2"
@@ -160,12 +160,12 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.51.0",
+        "current": "0.52.0",
         "protocol": 2,
         "requires": {
-          "remote-agent": ">=0.27.0",
+          "remote-agent": ">=0.30.0",
           "identity": ">=0.130.6",
-          "vault": ">=0.109.2",
+          "vault": ">=0.115.0",
           "proxy-client": ">=0.44.1",
           "update": ">=0.9.2",
           "vaultd": ">=0.142.0"
@@ -211,12 +211,12 @@ export const MANIFESTS = Object.freeze({
       "content": {
         "repo": "imdotrino/dotrino-content",
         "npm": "@dotrino/content",
-        "current": "0.7.1",
+        "current": "0.7.2",
         "protocol": 1,
         "requires": {
-          "remote-agent": ">=0.24.0",
+          "remote-agent": ">=0.30.0",
           "identity": ">=0.126.2",
-          "vault": ">=0.87.0",
+          "vault": ">=0.115.0",
           "proxy-client": ">=0.42.1",
           "update": ">=0.9.0"
         }
@@ -272,7 +272,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.114.0",
+        "current": "0.115.0",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -288,7 +288,7 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.188.0",
+        "current": "0.188.3",
         "protocol": 1,
         "requires": {
           "identity": ">=0.135.0",
