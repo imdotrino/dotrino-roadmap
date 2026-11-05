@@ -86,7 +86,7 @@ export const MANIFESTS = Object.freeze({
       "notifications": {
         "repo": "imdotrino/dotrino-notifications",
         "npm": "@dotrino/notifications",
-        "current": "0.7.2",
+        "current": "0.7.3",
         "protocol": 2,
         "requires": {
           "proxy-client": ">=0.20.0"
@@ -133,7 +133,7 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.32.1",
+        "current": "0.32.2",
         "protocol": 1,
         "requires": {
           "identity": ">=0.121.7",
@@ -224,7 +224,7 @@ export const MANIFESTS = Object.freeze({
       "sealers": {
         "repo": "imdotrino/dotrino-sealers",
         "npm": "@dotrino/sealers",
-        "current": "0.11.0",
+        "current": "0.11.1",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.30.0",
@@ -425,7 +425,7 @@ export const MANIFESTS = Object.freeze({
       "pay": {
         "repo": "imdotrino/dotrino-pay",
         "npm": "@dotrino/pay",
-        "current": "0.2.0",
+        "current": "0.2.1",
         "protocol": 1,
         "requires": {}
       },
