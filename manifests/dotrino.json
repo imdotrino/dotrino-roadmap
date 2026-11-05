@@ -391,14 +391,14 @@
     "ai": {
       "repo": "imdotrino/dotrino-ai",
       "npm": "@dotrino/ai",
-      "current": "0.1.1",
+      "current": "0.1.2",
       "protocol": 1,
       "requires": {}
     },
     "dictation": {
       "repo": "imdotrino/dotrino-dictation",
       "npm": "@dotrino/dictation",
-      "current": "0.1.1",
+      "current": "0.1.2",
       "protocol": 1,
       "requires": {}
     },
