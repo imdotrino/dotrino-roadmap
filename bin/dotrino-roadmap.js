@@ -18,6 +18,7 @@ import { loadManifest } from '../src/index.js'
 import { checkInstalled, installedFromLock, productByNpm, productByRepo, formatReport } from '../src/check.js'
 
 const args = process.argv.slice(2)
+/** @param {string} n @returns {string|null} */
 const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : null }
 const cmd = args[0]
 
@@ -29,6 +30,7 @@ if (cmd !== 'check') {
 const dir = path.resolve(opt('--dir') || '.')
 const m = loadManifest(opt('--manifest') || 'dotrino')
 const lockFile = path.join(dir, 'package-lock.json')
+/** @type {{ name?: string, dependencies?: Record<string, string>, peerDependencies?: Record<string, string>, optionalDependencies?: Record<string, string> }} */
 const pkg = (() => { try { return JSON.parse(fs.readFileSync(path.join(dir, 'package.json'), 'utf8')) } catch (_) { return {} } })()
 const usesPillars = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies, ...pkg.optionalDependencies }).some((n) => n.startsWith('@dotrino/'))
 if (!fs.existsSync(lockFile)) {
@@ -38,6 +40,7 @@ if (!fs.existsSync(lockFile)) {
   console.error(`✖ no package-lock.json in ${dir}: cannot tell which versions are installed`)
   process.exit(2)
 }
+/** @type {import('../src/check.js').PackageLock} */
 const lock = JSON.parse(fs.readFileSync(lockFile, 'utf8'))
 const repo = (() => {
   try {

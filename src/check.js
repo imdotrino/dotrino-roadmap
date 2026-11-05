@@ -20,13 +20,47 @@
 import { satisfies } from '@dotrino/compat/ranges'
 import { isBroken } from '@dotrino/compat'
 
-/** El producto del registro que se publica en npm como `npmName`, o `null`. */
+/** @typedef {import('./index.js').Manifest} Manifest */
+
+/**
+ * @typedef {object} Installed  una copia de un paquete `@dotrino/*` en el lock
+ * @property {string} name
+ * @property {string} version
+ * @property {string} path      la ruta en el lock (`node_modules/…`, anidadas incluidas)
+ */
+
+/**
+ * @typedef {object} PackageLock  lo que se lee de un `package-lock.json` v2/v3
+ * @property {Record<string, { version?: string, link?: boolean, dev?: boolean, peer?: boolean }>} [packages]
+ */
+
+/**
+ * @typedef {{ kind: 'broken', dep: string, version: string, path: string, why: string, fix: string }
+ *   | { kind: 'requires', dep: string, version: string, range: string|string[], product: string }
+ *   | { kind: 'unknown-product', product: string }} Problem
+ */
+
+/** @typedef {{ kind: 'undeclared', dep: string, version: string, product: string }} Warning */
+
+/** @typedef {{ ok: boolean, problems: Problem[], warnings: Warning[] }} CheckResult */
+
+/**
+ * El producto del registro que se publica en npm como `npmName`, o `null`.
+ * @param {Manifest|null|undefined} m
+ * @param {string|null|undefined} npmName
+ * @returns {string|null}
+ */
 export function productByNpm (m, npmName) {
   for (const [name, p] of Object.entries(m?.products || {})) if (p.npm === npmName) return name
   return null
 }
 
-/** El producto del registro cuyo repo es `repo` (`imdotrino/x`). Si hay varios, `null`. */
+/**
+ * El producto del registro cuyo repo es `repo` (`imdotrino/x`). Si hay varios, `null`.
+ * @param {Manifest|null|undefined} m
+ * @param {string} repo
+ * @returns {string|null}
+ */
 export function productByRepo (m, repo) {
   const hits = Object.entries(m?.products || {}).filter(([, p]) => p.repo === repo).map(([n]) => n)
   return hits.length === 1 ? hits[0] : null
@@ -39,8 +73,11 @@ export function productByRepo (m, repo) {
  * SIN lo que solo es de desarrollo (`dev: true`) ni las `peerDependencies` (`peer: true`): lo
  * primero no viaja con el paquete, y lo segundo lo pone quien lo consume —la copia del lock
  * solo sirve para probar—. Una librería prueba contra una identity vieja y no la publica.
+ * @param {PackageLock|null|undefined} lock
+ * @returns {Installed[]}
  */
 export function installedFromLock (lock) {
+  /** @type {Installed[]} */
   const out = []
   for (const [path, info] of Object.entries(lock?.packages || {})) {
     const m = /(?:^|\/)node_modules\/(@dotrino\/[^/]+)$/.exec(path)
@@ -50,16 +87,18 @@ export function installedFromLock (lock) {
 }
 
 /**
- * @param {object} m          el manifiesto (`loadManifest()`)
- * @param {object} o
- * @param {string|null} o.product   el producto que se comprueba (sus `requires`), o `null`
- * @param {{name:string,version:string,path:string}[]} o.installed
+ * @param {Manifest|null|undefined} m   el manifiesto (`loadManifest()`)
+ * @param {object} [o]
+ * @param {string|null} [o.product]   el producto que se comprueba (sus `requires`), o `null`
+ * @param {Installed[]} [o.installed]
  * @param {string[]|null} [o.direct]  las dependencias DIRECTAS (package.json); sin esto, todo lo
  *   instalado arriba — que incluye lo que npm subió de otros paquetes
- * @returns {{ ok: boolean, problems: object[], warnings: object[] }}
+ * @returns {CheckResult}
  */
 export function checkInstalled (m, { product = null, installed = [], direct = null } = {}) {
+  /** @type {Problem[]} */
   const problems = []
+  /** @type {Warning[]} */
   const warnings = []
   const broken = Array.isArray(m?.broken) ? m.broken : []
 
@@ -92,8 +131,14 @@ export function checkInstalled (m, { product = null, installed = [], direct = nu
   return { ok: problems.length === 0, problems, warnings }
 }
 
-/** Una línea por hallazgo, en inglés (es lo que sale en el log de CI). */
+/**
+ * Una línea por hallazgo, en inglés (es lo que sale en el log de CI).
+ * @param {{ problems: Problem[], warnings: Warning[] }} result
+ * @param {{ product?: string|null }} [opts]
+ * @returns {string}
+ */
 export function formatReport ({ problems, warnings }, { product = null } = {}) {
+  /** @type {string[]} */
   const L = []
   for (const p of problems) {
     if (p.kind === 'broken') L.push(`✖ ${p.dep}@${p.version} is marked BROKEN (${p.path})${p.why ? ` — ${p.why}` : ''}${p.fix ? `\n    fix: ${p.fix}` : ''}`)
