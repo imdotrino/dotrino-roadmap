@@ -134,7 +134,7 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.33.0",
+        "current": "0.33.1",
         "protocol": 1,
         "requires": {
           "identity": ">=0.136.0",
@@ -433,7 +433,7 @@ export const MANIFESTS = Object.freeze({
       "update": {
         "repo": "imdotrino/dotrino-update",
         "npm": "@dotrino/update",
-        "current": "0.9.3",
+        "current": "0.9.4",
         "protocol": 1,
         "requires": {}
       }
