@@ -22,10 +22,10 @@ export const MANIFESTS = Object.freeze({
       "env": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/env",
-        "current": "0.114.0",
+        "current": "0.118.0",
         "protocol": 1,
         "requires": {
-          "vault": ">=0.109.0"
+          "vault": ">=0.118.0"
         }
       },
       "identity": {
@@ -111,7 +111,7 @@ export const MANIFESTS = Object.freeze({
       },
       "proxy": {
         "repo": "imdotrino/dotrino-proxy",
-        "current": "1.10.1",
+        "current": "1.11.0",
         "protocol": 2,
         "requires": {
           "vault": ">=0.87.0",
@@ -189,7 +189,7 @@ export const MANIFESTS = Object.freeze({
       },
       "terminal-desktop": {
         "repo": "imdotrino/dotrino-terminal",
-        "current": "0.2.90",
+        "current": "0.2.92",
         "protocol": 1,
         "requires": {
           "terminal-agent": ">=0.37.0"
@@ -236,7 +236,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.59",
+        "current": "0.4.87",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -272,7 +272,7 @@ export const MANIFESTS = Object.freeze({
       "vault": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vault",
-        "current": "0.116.0",
+        "current": "0.118.0",
         "protocol": 1,
         "requires": {
           "vaultd": ">=0.105.0",
@@ -288,7 +288,7 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.189.0",
+        "current": "0.190.1",
         "protocol": 1,
         "requires": {
           "identity": ">=0.135.0",

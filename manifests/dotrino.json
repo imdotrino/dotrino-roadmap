@@ -14,10 +14,10 @@
     "env": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/env",
-      "current": "0.114.0",
+      "current": "0.118.0",
       "protocol": 1,
       "requires": {
-        "vault": ">=0.109.0"
+        "vault": ">=0.118.0"
       }
     },
     "identity": {
@@ -228,7 +228,7 @@
     "roadmap": {
       "repo": "imdotrino/dotrino-roadmap",
       "npm": "@dotrino/roadmap",
-      "current": "0.4.59",
+      "current": "0.4.87",
       "protocol": 1,
       "requires": {
         "compat": "0.4.0+"
