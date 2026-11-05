@@ -237,7 +237,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.87",
+        "current": "0.4.88",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
