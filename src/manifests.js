@@ -95,7 +95,7 @@ export const MANIFESTS = Object.freeze({
       "opaque": {
         "repo": "imdotrino/dotrino-opaque",
         "npm": "@dotrino/opaque",
-        "current": "0.1.0",
+        "current": "0.1.1",
         "protocol": 1,
         "requires": {}
       },
@@ -256,7 +256,7 @@ export const MANIFESTS = Object.freeze({
       "theme": {
         "repo": "imdotrino/dotrino-theme",
         "npm": "@dotrino/theme",
-        "current": "0.1.0",
+        "current": "0.1.1",
         "protocol": 1,
         "requires": {}
       },
