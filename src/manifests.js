@@ -123,7 +123,7 @@ export const MANIFESTS = Object.freeze({
       "proxy-client": {
         "repo": "imdotrino/dotrino-proxy-client",
         "npm": "@dotrino/proxy-client",
-        "current": "0.46.0",
+        "current": "0.46.1",
         "protocol": 2,
         "requires": {
           "identity": ">=0.53.0",
