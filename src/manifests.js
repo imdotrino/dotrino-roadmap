@@ -40,7 +40,7 @@ export const MANIFESTS = Object.freeze({
       "lobby": {
         "repo": "imdotrino/dotrino-lobby",
         "npm": "@dotrino/lobby",
-        "current": "0.10.4",
+        "current": "0.10.5",
         "protocol": 2,
         "requires": {
           "proxy-client": ">=0.22.0",
@@ -102,7 +102,7 @@ export const MANIFESTS = Object.freeze({
       "profile": {
         "repo": "imdotrino/dotrino-profile",
         "npm": "@dotrino/profile",
-        "current": "0.21.1",
+        "current": "0.21.2",
         "protocol": 1,
         "requires": {
           "identity": ">=0.33.0",
@@ -432,7 +432,7 @@ export const MANIFESTS = Object.freeze({
       "update": {
         "repo": "imdotrino/dotrino-update",
         "npm": "@dotrino/update",
-        "current": "0.9.2",
+        "current": "0.9.3",
         "protocol": 1,
         "requires": {}
       }
