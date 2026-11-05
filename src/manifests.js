@@ -15,7 +15,7 @@ export const MANIFESTS = Object.freeze({
       "compat": {
         "repo": "imdotrino/dotrino-compat",
         "npm": "@dotrino/compat",
-        "current": "0.5.0",
+        "current": "0.5.1",
         "protocol": 1,
         "requires": {}
       },
@@ -146,7 +146,7 @@ export const MANIFESTS = Object.freeze({
       "tunnel": {
         "repo": "imdotrino/dotrino-tunnel",
         "npm": "@dotrino/tunnel",
-        "current": "0.5.2",
+        "current": "0.5.3",
         "protocol": 2,
         "requires": {
           "identity": ">=0.127.0",
@@ -305,7 +305,7 @@ export const MANIFESTS = Object.freeze({
       "verifier": {
         "repo": "imdotrino/dotrino-verifier",
         "npm": "@dotrino/verifier",
-        "current": "0.3.1",
+        "current": "0.3.2",
         "protocol": 1,
         "requires": {
           "identity": "0.87.0+"
