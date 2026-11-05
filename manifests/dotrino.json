@@ -14,7 +14,7 @@
     "env": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/env",
-      "current": "0.121.1",
+      "current": "0.121.2",
       "protocol": 1,
       "requires": {
         "vault": ">=0.118.0"
@@ -23,7 +23,7 @@
     "identity": {
       "repo": "imdotrino/dotrino-identity",
       "npm": "@dotrino/identity",
-      "current": "0.137.0",
+      "current": "0.137.1",
       "protocol": 1,
       "requires": {
         "proxy-client": ">=0.20.0"
@@ -265,7 +265,7 @@
     "vault": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vault",
-      "current": "0.121.1",
+      "current": "0.121.2",
       "protocol": 1,
       "requires": {
         "vaultd": ">=0.105.0",
@@ -281,7 +281,7 @@
     "vaultd": {
       "repo": "imdotrino/dotrino-vault",
       "npm": "@dotrino/vaultd",
-      "current": "0.193.1",
+      "current": "0.193.2",
       "protocol": 1,
       "requires": {
         "identity": ">=0.136.0",
@@ -346,7 +346,7 @@
     },
     "app": {
       "repo": "imdotrino/dotrino-app",
-      "current": "0.4.30",
+      "current": "0.4.33",
       "protocol": 1,
       "requires": {
         "proxy": "1.6.0+",
@@ -356,7 +356,7 @@
     },
     "app-ios": {
       "repo": "imdotrino/dotrino-app",
-      "current": "0.4.19",
+      "current": "0.4.33",
       "protocol": 1,
       "requires": {
         "proxy": "1.6.0+",
