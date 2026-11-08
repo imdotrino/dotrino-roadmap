@@ -1,7 +1,7 @@
 {
   "manifest": "dotrino",
-  "seq": 50,
-  "issued": "2026-11-08T16:59:52.000Z",
+  "seq": 51,
+  "issued": "2026-11-08T20:55:05.000Z",
   "note": "Registro comun de compatibilidad del ecosistema. Se edita a mano en este repo y se consulta con @dotrino/roadmap. Rangos: ver @dotrino/compat/ranges (x.y.z, >= > <= <, «a - b», «*», o una lista que es un O).",
   "products": {
     "compat": {
@@ -73,6 +73,16 @@
       "protocol": 1,
       "requires": {
         "proxy": "1.1.0+"
+      }
+    },
+    "notes": {
+      "repo": "imdotrino/dotrino-notes",
+      "current": "0.3.0",
+      "protocol": 1,
+      "requires": {
+        "identity": ">=0.138.0",
+        "store": ">=0.14.3",
+        "topbar": ">=0.17.3"
       }
     },
     "notifications": {
