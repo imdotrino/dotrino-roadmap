@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.137.1",
+        "current": "0.138.0",
         "protocol": 1,
         "requires": {
           "proxy-client": ">=0.20.0"
@@ -342,10 +342,10 @@ export const MANIFESTS = Object.freeze({
       },
       "passmanager-extension": {
         "repo": "imdotrino/dotrino-passmanager",
-        "current": "0.58.6",
+        "current": "0.59.0",
         "protocol": 1,
         "requires": {
-          "identity": ">=0.136.0",
+          "identity": ">=0.138.0",
           "proxy-client": ">=0.47.0",
           "vault": ">=0.120.1",
           "proxy": "1.1.0+",
