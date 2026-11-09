@@ -93,6 +93,22 @@ export const MANIFESTS = Object.freeze({
           "topbar": ">=0.17.3"
         }
       },
+      "notes-android": {
+        "repo": "imdotrino/dotrino-notes",
+        "current": "0.3.0",
+        "protocol": 1,
+        "requires": {
+          "proxy": "1.1.0+"
+        }
+      },
+      "notes-ios": {
+        "repo": "imdotrino/dotrino-notes",
+        "current": "0.3.0",
+        "protocol": 1,
+        "requires": {
+          "proxy": "1.1.0+"
+        }
+      },
       "notifications": {
         "repo": "imdotrino/dotrino-notifications",
         "npm": "@dotrino/notifications",
