@@ -160,7 +160,7 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.34.0",
+        "current": "0.36.0",
         "protocol": 1,
         "requires": {
           "identity": ">=0.136.0",
@@ -196,6 +196,19 @@ export const MANIFESTS = Object.freeze({
           "proxy-client": ">=0.46.0",
           "update": ">=0.9.2",
           "vaultd": ">=0.142.0"
+        }
+      },
+      "remote-desktop-agent": {
+        "repo": "imdotrino/dotrino-remote-desktop",
+        "npm": "@dotrino/remote-desktop-agent",
+        "current": "0.1.1",
+        "protocol": 1,
+        "requires": {
+          "remote-agent": ">=0.36.0",
+          "proxy-client": ">=0.49.0",
+          "identity": ">=0.136.0",
+          "vault": ">=0.115.0",
+          "update": ">=0.9.4"
         }
       },
       "terminal-ios": {
