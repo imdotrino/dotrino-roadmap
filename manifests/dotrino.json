@@ -464,7 +464,7 @@
     "update": {
       "repo": "imdotrino/dotrino-update",
       "npm": "@dotrino/update",
-      "current": "0.10.0",
+      "current": "0.11.0",
       "protocol": 1,
       "requires": {}
     }
