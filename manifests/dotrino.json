@@ -193,7 +193,7 @@
     "remote-desktop-agent": {
       "repo": "imdotrino/dotrino-remote-desktop",
       "npm": "@dotrino/remote-desktop-agent",
-      "current": "0.3.1",
+      "current": "0.3.2",
       "protocol": 1,
       "requires": {
         "remote-agent": ">=0.36.0",
