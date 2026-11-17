@@ -152,7 +152,7 @@
     "remote-agent": {
       "repo": "imdotrino/dotrino-remote-agent",
       "npm": "@dotrino/remote-agent",
-      "current": "0.40.0",
+      "current": "0.40.1",
       "protocol": 1,
       "requires": {
         "identity": ">=0.139.0",
@@ -179,10 +179,10 @@
     "terminal-agent": {
       "repo": "imdotrino/dotrino-terminal",
       "npm": "@dotrino/terminal-agent",
-      "current": "0.56.0",
+      "current": "0.56.1",
       "protocol": 2,
       "requires": {
-        "remote-agent": ">=0.39.2",
+        "remote-agent": ">=0.40.1",
         "identity": ">=0.139.0",
         "vault": ">=0.115.0",
         "proxy-client": ">=0.49.0",
@@ -1232,6 +1232,36 @@
       "versions": "0.182.2",
       "why": "al adoptar un acta sellada por otra bóveda no guardaba la anterior en el historial: con dos bóvedas, un aparato atrasado no podía ponerse al día y se quedaba en su acta para siempre (2026-10-27, arreglado en identity 0.131.0/0.132.0, vaultd 0.183.1/0.184.0)",
       "fix": "actualiza la bóveda a 0.184.0 (dotrino-vault update)"
+    },
+    {
+      "product": "remote-agent",
+      "versions": "0.39.2",
+      "why": "un saludo fallido (unauthorized o sin respuesta) dejaba abierto su WebSocket con reconexión automática; el agente de terminal reintenta cada pocos segundos y el 2026-11-17 acumuló 380 conexiones al proxio, agotó las de nginx y nadie más pudo conectarse",
+      "fix": "sube a @dotrino/remote-agent 0.40.1"
+    },
+    {
+      "product": "remote-agent",
+      "versions": "0.40.0",
+      "why": "un saludo fallido (unauthorized o sin respuesta) dejaba abierto su WebSocket con reconexión automática; el agente de terminal reintenta cada pocos segundos y el 2026-11-17 acumuló 380 conexiones al proxio, agotó las de nginx y nadie más pudo conectarse",
+      "fix": "sube a @dotrino/remote-agent 0.40.1"
+    },
+    {
+      "product": "terminal-agent",
+      "versions": "0.54.1",
+      "why": "usa un @dotrino/remote-agent que deja abierto el WebSocket de cada saludo fallido: acumula conexiones al proxio hasta agotarlas (2026-11-17)",
+      "fix": "sube a @dotrino/terminal-agent 0.56.1"
+    },
+    {
+      "product": "terminal-agent",
+      "versions": "0.55.0",
+      "why": "usa un @dotrino/remote-agent que deja abierto el WebSocket de cada saludo fallido: acumula conexiones al proxio hasta agotarlas (2026-11-17)",
+      "fix": "sube a @dotrino/terminal-agent 0.56.1"
+    },
+    {
+      "product": "terminal-agent",
+      "versions": "0.56.0",
+      "why": "usa un @dotrino/remote-agent que deja abierto el WebSocket de cada saludo fallido: acumula conexiones al proxio hasta agotarlas (2026-11-17)",
+      "fix": "sube a @dotrino/terminal-agent 0.56.1"
     }
   ]
 }
