@@ -31,7 +31,7 @@ export const MANIFESTS = Object.freeze({
       "identity": {
         "repo": "imdotrino/dotrino-identity",
         "npm": "@dotrino/identity",
-        "current": "0.138.0",
+        "current": "0.139.0",
         "protocol": 1,
         "requires": {
           "proxy-client": ">=0.20.0"
@@ -160,10 +160,10 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.37.0",
+        "current": "0.39.2",
         "protocol": 1,
         "requires": {
-          "identity": ">=0.136.0",
+          "identity": ">=0.139.0",
           "vault": ">=0.115.0",
           "proxy-client": ">=0.46.0",
           "vaultd": ">=0.154.0",
@@ -187,11 +187,11 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.55.0",
+        "current": "0.56.0",
         "protocol": 2,
         "requires": {
-          "remote-agent": ">=0.37.0",
-          "identity": ">=0.136.0",
+          "remote-agent": ">=0.39.2",
+          "identity": ">=0.139.0",
           "vault": ">=0.115.0",
           "proxy-client": ">=0.49.0",
           "update": ">=0.9.4",
@@ -201,12 +201,12 @@ export const MANIFESTS = Object.freeze({
       "remote-desktop-agent": {
         "repo": "imdotrino/dotrino-remote-desktop",
         "npm": "@dotrino/remote-desktop-agent",
-        "current": "0.5.0",
+        "current": "0.6.0",
         "protocol": 1,
         "requires": {
-          "remote-agent": ">=0.37.0",
+          "remote-agent": ">=0.39.2",
           "proxy-client": ">=0.49.0",
-          "identity": ">=0.136.0",
+          "identity": ">=0.139.0",
           "vault": ">=0.115.0",
           "update": ">=0.9.4"
         }
@@ -328,10 +328,10 @@ export const MANIFESTS = Object.freeze({
       "vaultd": {
         "repo": "imdotrino/dotrino-vault",
         "npm": "@dotrino/vaultd",
-        "current": "0.193.3",
+        "current": "0.194.0",
         "protocol": 1,
         "requires": {
-          "identity": ">=0.136.0",
+          "identity": ">=0.139.0",
           "proxy-client": ">=0.47.0",
           "store": ">=0.13.0",
           "passmanager": ">=0.18.6",
