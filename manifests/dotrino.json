@@ -203,6 +203,14 @@
         "update": ">=0.9.4"
       }
     },
+    "remote-desktop-desktop": {
+      "repo": "imdotrino/dotrino-remote-desktop",
+      "current": "0.1.0",
+      "protocol": 1,
+      "requires": {
+        "remote-desktop-agent": ">=0.7.0"
+      }
+    },
     "terminal-ios": {
       "repo": "imdotrino/dotrino-terminal",
       "current": "0.13.8",
