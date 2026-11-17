@@ -160,7 +160,7 @@ export const MANIFESTS = Object.freeze({
       "remote-agent": {
         "repo": "imdotrino/dotrino-remote-agent",
         "npm": "@dotrino/remote-agent",
-        "current": "0.40.1",
+        "current": "0.40.2",
         "protocol": 1,
         "requires": {
           "identity": ">=0.139.0",
@@ -173,7 +173,7 @@ export const MANIFESTS = Object.freeze({
       "tunnel": {
         "repo": "imdotrino/dotrino-tunnel",
         "npm": "@dotrino/tunnel",
-        "current": "0.5.3",
+        "current": "0.5.5",
         "protocol": 2,
         "requires": {
           "identity": ">=0.127.0",
@@ -187,7 +187,7 @@ export const MANIFESTS = Object.freeze({
       "terminal-agent": {
         "repo": "imdotrino/dotrino-terminal",
         "npm": "@dotrino/terminal-agent",
-        "current": "0.56.1",
+        "current": "0.56.3",
         "protocol": 2,
         "requires": {
           "remote-agent": ">=0.40.1",
@@ -201,7 +201,7 @@ export const MANIFESTS = Object.freeze({
       "remote-desktop-agent": {
         "repo": "imdotrino/dotrino-remote-desktop",
         "npm": "@dotrino/remote-desktop-agent",
-        "current": "0.10.1",
+        "current": "0.10.2",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.40.0",
@@ -251,7 +251,7 @@ export const MANIFESTS = Object.freeze({
       "content": {
         "repo": "imdotrino/dotrino-content",
         "npm": "@dotrino/content",
-        "current": "0.7.3",
+        "current": "0.7.5",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.30.0",
@@ -264,7 +264,7 @@ export const MANIFESTS = Object.freeze({
       "sealers": {
         "repo": "imdotrino/dotrino-sealers",
         "npm": "@dotrino/sealers",
-        "current": "0.11.1",
+        "current": "0.11.2",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.30.0",
@@ -276,7 +276,7 @@ export const MANIFESTS = Object.freeze({
       "roadmap": {
         "repo": "imdotrino/dotrino-roadmap",
         "npm": "@dotrino/roadmap",
-        "current": "0.4.88",
+        "current": "0.4.96",
         "protocol": 1,
         "requires": {
           "compat": "0.4.0+"
@@ -453,7 +453,7 @@ export const MANIFESTS = Object.freeze({
       "expenses-agent": {
         "repo": "imdotrino/dotrino-expenses-agent",
         "npm": "@dotrino/expenses-agent",
-        "current": "0.2.1",
+        "current": "0.2.2",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.30.0",
@@ -1276,6 +1276,24 @@ export const MANIFESTS = Object.freeze({
         "versions": "0.12.0",
         "why": "verifyNpmPackage buscaba la firma de sigstore con el nombre del tarball del registro y no con el de npm pack: con el espejo como único canal no la encontraba y no instalaba",
         "fix": "sube a @dotrino/update 0.12.1"
+      },
+      {
+        "product": "content",
+        "versions": "0.7.4",
+        "why": "salió a npm sin su release de GitHub (el espejo falló antes de crearla): sin npm-integrity.json las piezas no pueden verificarla y no se actualizan a ella",
+        "fix": "sube a @dotrino/content 0.7.5"
+      },
+      {
+        "product": "terminal-agent",
+        "versions": "0.56.2",
+        "why": "salió a npm sin su release de GitHub (el espejo falló antes de crearla): sin npm-integrity.json las piezas no pueden verificarla y no se actualizan a ella",
+        "fix": "sube a @dotrino/terminal-agent 0.56.3"
+      },
+      {
+        "product": "tunnel",
+        "versions": "0.5.4",
+        "why": "salió a npm sin su release de GitHub (el espejo falló antes de crearla): sin npm-integrity.json las piezas no pueden verificarla y no se actualizan a ella",
+        "fix": "sube a @dotrino/tunnel 0.5.5"
       }
     ]
   }
