@@ -201,7 +201,7 @@ export const MANIFESTS = Object.freeze({
       "remote-desktop-agent": {
         "repo": "imdotrino/dotrino-remote-desktop",
         "npm": "@dotrino/remote-desktop-agent",
-        "current": "0.10.2",
+        "current": "0.10.3",
         "protocol": 1,
         "requires": {
           "remote-agent": ">=0.40.0",
