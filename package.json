@@ -45,6 +45,6 @@
     "dotrino-roadmap": "bin/dotrino-roadmap.js"
   },
   "dependencies": {
-    "@dotrino/update": "0.6.1"
+    "@dotrino/update": "0.12.1"
   }
 }
