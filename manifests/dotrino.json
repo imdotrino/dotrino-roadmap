@@ -464,7 +464,7 @@
     "update": {
       "repo": "imdotrino/dotrino-update",
       "npm": "@dotrino/update",
-      "current": "0.11.0",
+      "current": "0.12.1",
       "protocol": 1,
       "requires": {}
     }
@@ -1262,6 +1262,12 @@
       "versions": "0.56.0",
       "why": "usa un @dotrino/remote-agent que deja abierto el WebSocket de cada saludo fallido: acumula conexiones al proxio hasta agotarlas (2026-11-17)",
       "fix": "sube a @dotrino/terminal-agent 0.56.1"
+    },
+    {
+      "product": "update",
+      "versions": "0.12.0",
+      "why": "verifyNpmPackage buscaba la firma de sigstore con el nombre del tarball del registro y no con el de npm pack: con el espejo como único canal no la encontraba y no instalaba",
+      "fix": "sube a @dotrino/update 0.12.1"
     }
   ]
 }
