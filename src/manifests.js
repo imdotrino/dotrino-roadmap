@@ -483,6 +483,15 @@ export const MANIFESTS = Object.freeze({
         "current": "0.12.1",
         "protocol": 1,
         "requires": {}
+      },
+      "context": {
+        "repo": "imdotrino/dotrino-context",
+        "npm": "@dotrino/context",
+        "current": "0.1.0",
+        "protocol": 1,
+        "requires": {
+          "update": ">=0.12.1"
+        }
       }
     },
     "broken": [
