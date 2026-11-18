@@ -487,7 +487,7 @@ export const MANIFESTS = Object.freeze({
       "context": {
         "repo": "imdotrino/dotrino-context",
         "npm": "@dotrino/context",
-        "current": "0.1.0",
+        "current": "0.1.1",
         "protocol": 1,
         "requires": {
           "update": ">=0.12.1"
