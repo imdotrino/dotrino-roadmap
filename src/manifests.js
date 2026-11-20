@@ -85,11 +85,13 @@ export const MANIFESTS = Object.freeze({
       },
       "temp": {
         "repo": "imdotrino/dotrino-temp",
-        "current": "0.2.0",
+        "current": "0.3.0",
         "protocol": 1,
         "requires": {
           "proxy-client": ">=0.49.1",
-          "proxy": "1.6.1+"
+          "proxy": "1.6.1+",
+          "identity": ">=0.139.0",
+          "store": ">=0.12.3"
         }
       },
       "notes": {
