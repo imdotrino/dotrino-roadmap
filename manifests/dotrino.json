@@ -75,9 +75,9 @@
         "proxy": "1.1.0+"
       }
     },
-    "efimeral": {
-      "repo": "imdotrino/dotrino-efimeral",
-      "current": "0.1.0",
+    "temp": {
+      "repo": "imdotrino/dotrino-temp",
+      "current": "0.2.0",
       "protocol": 1,
       "requires": {
         "proxy-client": ">=0.49.1",
